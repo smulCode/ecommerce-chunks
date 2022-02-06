@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import wrapperBg from "../../assets/IMG/wrapper-choco.jpg";
 import chocoBar from "../../assets/IMG/choco-part-bar.png";
-import Button from  "../Button"
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import Button from "../Button";
 
 
 const Container = styled.div`
@@ -10,17 +11,26 @@ const Container = styled.div`
   background: ${({ theme }) => theme.primaryDark};
   color: ${({ theme }) => theme.primaryLight};
   text-align: center;
+
+  svg{
+    display:flex;
+    margin:0 auto;
+    margin-top: 0.5em;
+    position: relative;
+    font-size:3em;
+    color: ${({ theme }) => theme.primaryAccent};
+  }
 `;
 
 const Wrapper = styled.div`
-  padding-top: 5em;
+  padding-top: 2em;
   position: relative;
 `;
 
 const Headline = styled.h1`
   position: absolute;
   font-weight: bold;
-  top: 8%;
+  top: 0;
   left: 0px;
   color: ${({ theme }) => theme.primaryAccent};
   font-style: italic;
@@ -35,7 +45,7 @@ const Headline = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: ${({ theme }) => theme.primaryAccent};
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 1000;
+  z-index: 1;
 `;
 
 const Content = styled.div`
@@ -43,13 +53,12 @@ const Content = styled.div`
   height: 65vh;
   width: 100%;
   background-size: cover;
-  clip-path: polygon(14% 0, 92% 0, 92% 9%, 0 100%, 0 17%);
   clip-path: polygon(11% 0, 92% 0, 92% 9%, 0 100%, 0 14%);
 `;
 
 const CenterContent = styled.div`
   position: absolute;
-  top: 25%;
+  top: 20%;
   display: grid;
   place-content: center;
   grid-template-columns: 1fr;
@@ -77,20 +86,19 @@ const Span = styled.span`
 
 const BottomContent = styled.div`
   position: relative;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
-  margin-top:-6em;
-
+  margin-top: -6em;
 `;
 const Title = styled.div`
-display: flex;
-align-items: center;
- flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   font-size: 10vw;
-  line-height:0.9em;
+  line-height: 0.9em;
   letter-spacing: -0.045em;
   -webkit-text-stroke: 2px white;
   -webkit-background-clip: text;
@@ -98,21 +106,16 @@ align-items: center;
   width: 100%;
 `;
 
-const FirstLine = styled.div`
-  
-`;
+const FirstLine = styled.div``;
 
-const SecondLine = styled.div`
-  
-`;
+const SecondLine = styled.div``;
 const SubTitle = styled.div`
   font-weight: 300;
-  margin:1em;
-  font-size:1.6em;
+  margin: 1em;
+  font-size: 1.3em;
   line-height: 16px;
   letter-spacing: -0.045em;
 `;
-
 
 const Hero = () => {
   return (
@@ -126,17 +129,19 @@ const Hero = () => {
       </CenterContent>
       <BottomContent>
         <Title>
-          <FirstLine> 
-          <Span>HEALTHY </Span>
-          CHUNKS 
+          <FirstLine>
+            <Span>HEALTHY </Span>
+            CHUNKS
           </FirstLine>
-          <SecondLine> OF
-          <Span> HEAVEN</Span>
+          <SecondLine>
+            OF
+            <Span> HEAVEN</Span>
           </SecondLine>
         </Title>
         <SubTitle>Plant-based candy bars zero sugar</SubTitle>
       </BottomContent>
-      <Button  text={"BUY NOW"}></Button>
+      <Button text={"BUY NOW"}/>
+      <KeyboardArrowDownIcon/>
     </Container>
   );
 };

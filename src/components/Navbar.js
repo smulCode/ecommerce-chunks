@@ -55,6 +55,7 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
+
   const [open, setOpen] = useState(false);
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));

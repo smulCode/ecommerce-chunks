@@ -1,7 +1,7 @@
 import StyledButton from "./Button.styled"
 
 const Button = ({text}) => {
-  return <StyledButton>{text}</StyledButton>;
+  return <StyledButton primary>{text}</StyledButton>;
 };
 
 export default Button;
