@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import wrapperBg from "../../assets/IMG/wrapper-choco.jpg";
 import chocoBar from "../../assets/IMG/choco-part-bar.png";
+import Button from  "../Button"
+
 
 const Container = styled.div`
   position: relative;
   height: 100vh;
   background: ${({ theme }) => theme.primaryDark};
   color: ${({ theme }) => theme.primaryLight};
+  text-align: center;
 `;
 
 const Wrapper = styled.div`
@@ -65,7 +68,6 @@ const Image = styled.img`
 const Span = styled.span`
   font-style: italic;
   font-weight: 900;
-  font-size: 24px;
   line-height: 28px;
   letter-spacing: -0.045em;
   -webkit-text-stroke: 1px white;
@@ -75,25 +77,43 @@ const Span = styled.span`
 
 const BottomContent = styled.div`
   position: relative;
-  width: 206px;
-  height: 62px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 0 auto;
+  margin-top:-6em;
+
 `;
 const Title = styled.div`
-  font-size: 24px;
-  line-height: 28px;
+display: flex;
+align-items: center;
+ flex-direction: column;
+  font-size: 10vw;
+  line-height:0.9em;
   letter-spacing: -0.045em;
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 2px white;
   -webkit-background-clip: text;
   -webkit-text-fill-color: ${({ theme }) => theme.primaryLight};
+  width: 100%;
+`;
+
+const FirstLine = styled.div`
+  
+`;
+
+const SecondLine = styled.div`
+  
 `;
 const SubTitle = styled.div`
-  font-size: 14px;
+  font-weight: 300;
+  margin:1em;
+  font-size:1.6em;
   line-height: 16px;
   letter-spacing: -0.045em;
 `;
 
-const Button = styled.button``;
+
 const Hero = () => {
   return (
     <Container>
@@ -106,13 +126,17 @@ const Hero = () => {
       </CenterContent>
       <BottomContent>
         <Title>
+          <FirstLine> 
           <Span>HEALTHY </Span>
-          CHUNKS OF
+          CHUNKS 
+          </FirstLine>
+          <SecondLine> OF
           <Span> HEAVEN</Span>
+          </SecondLine>
         </Title>
         <SubTitle>Plant-based candy bars zero sugar</SubTitle>
       </BottomContent>
-      <Button>Buy now</Button>
+      <Button  text={"BUY NOW"}></Button>
     </Container>
   );
 };
