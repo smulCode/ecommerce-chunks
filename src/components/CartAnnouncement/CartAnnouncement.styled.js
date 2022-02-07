@@ -1,0 +1,18 @@
+import styled from "styled-components";
+
+export const StyledCartAnnouncement = styled.div`
+  height: 20vh;
+  width: 100%;
+  text-align: center;
+  padding: 4vw 3em;
+  background-color: ${({ theme }) => theme.secondaryAccent};
+`;
+
+export const Title = styled.h2`
+  font-weight: 400;
+  color: ${({ theme }) => theme.primaryDark};
+`;
+
+export const SubTitle = styled.p`
+  color: ${({ theme }) => theme.primaryDark};
+`;
