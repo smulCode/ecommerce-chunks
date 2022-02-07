@@ -25,25 +25,21 @@ export const StyledButton = styled.button`
   }
 `;
 
-
 export const Wrapper = styled.div`
-  display:flex;
-  justify-content:space-between;
-  gap:0.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
 
   svg {
-    margin-top:0.3em;
-    font-size:3em;
+    margin-top: 0.4em;
+    font-size: 2.5em;
     color: ${({ theme }) => theme.primaryDark};
   }
-
 `;
 
-
 export const BrandTitle = styled.div`
-  color:#999999;
-  margin-top:2em;
-
+  color: #999999;
+  margin-top: 2em;
 `;
 export const StyledMenu = styled.nav`
   display: flex;

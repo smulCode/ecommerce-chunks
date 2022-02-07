@@ -1,9 +1,9 @@
 import React from "react";
 import { bool } from "prop-types";
-import { StyledMenu, StyledButton,Wrapper,BrandTitle } from "./Menu.styled";
+import { StyledMenu, StyledButton, Wrapper, BrandTitle } from "./Menu.styled";
 import { Link } from "react-router-dom";
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Menu = ({ open }) => {
   return (
@@ -27,25 +27,25 @@ const Menu = ({ open }) => {
         <Link to="/">DOUBLE DARK MINT</Link>
       </StyledButton>
 
-      <Wrapper> 
-      <StyledButton bgColor="191D1E" color="FFF">
-        <Link to="/">CONTACT</Link>
-      </StyledButton>
-      <StyledButton bgColor="191D1E" color="FFF">
-        <Link to="/">FAQ</Link>
-      </StyledButton>
+      <Wrapper>
+        <StyledButton bgColor="191D1E" color="FFF">
+          <Link to="/">CONTACT</Link>
+        </StyledButton>
+        <StyledButton bgColor="191D1E" color="FFF">
+          <Link to="/">FAQ</Link>
+        </StyledButton>
       </Wrapper>
       <StyledButton bgColor="191D1E" color="FFF">
         <Link to="/">LOGIN</Link>
       </StyledButton>
 
-<Wrapper> 
-<div> 
-  <FacebookIcon/>
-  <InstagramIcon/>
-</div>
-  <BrandTitle>© 2022 CHUNKS LLC</BrandTitle>
-</Wrapper>
+      <Wrapper>
+        <div>
+          <FacebookIcon />
+          <InstagramIcon />
+        </div>
+        <BrandTitle>© 2022 CHUNKS LLC</BrandTitle>
+      </Wrapper>
     </StyledMenu>
   );
 };

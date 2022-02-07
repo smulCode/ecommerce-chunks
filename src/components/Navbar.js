@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import Badge from "@mui/material/Badge";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 
 import { useState, useRef } from "react";
 import { useOnClickOutside } from "../hooks";
 import Burger from "../components/Burger";
 import Menu from "../components/Menu";
+import Cart from "../components/Cart";
+import CartMenuBurger from "../components/CartMenuBurger";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
@@ -32,12 +32,11 @@ const Left = styled.div`
 const Center = styled.div`
   flex: 1;
   text-align: center;
-  z-index: 100;
+  z-index: 10;
 `;
 
 const Logo = styled.h1`
   font-weight: bold;
-  z-index: 100;
   color: ${({ theme, open }) => open ? theme.primaryDark : theme.primaryAccent};
   a {
     text-decoration: none;
@@ -63,7 +62,9 @@ const MenuItem = styled.div`
 const Navbar = () => {
 
   const [open, setOpen] = useState(false);
+  const [openCart, setOpenCart] = useState(false);
   const node = useRef();
+  
   useOnClickOutside(node, () => setOpen(false));
   return (
     <Container>
@@ -85,11 +86,9 @@ const Navbar = () => {
             
           </MenuItem>
           <MenuItem open={open} setOpen={setOpen}>
-            <Badge badgeContent={4} color="primary">
-              <Link to="/Cart">
-                <ShoppingCartOutlinedIcon />
-              </Link>
-            </Badge>
+          
+            <CartMenuBurger open={openCart} setOpen={setOpenCart} />
+                <Cart open={openCart} setOpen={setOpenCart}/>
           </MenuItem>
         </Right>
       </Wrapper>
