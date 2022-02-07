@@ -1,5 +1,5 @@
 import {
-  StyledCartProducts,
+  StyledCartSuggestion,
   Message,
   Suggestion,
   Question,
@@ -14,14 +14,15 @@ import {
   Right,
   Price,
   StyledButton,
-} from "./CartProducts.styled";
+
+} from "./CartSuggestion.styled";
 import doubleChocoBar from "../../assets/IMG/Chocolate-Bar-Packaging-Mockup-removebg-preview.png";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 
-const CartProducts = () => {
+const CartSuggestion = () => {
   return (
-    <StyledCartProducts>
+    <StyledCartSuggestion>
       <Message>YOUR CART IS EMPTY</Message>
       <Suggestion>
         <Question>WHY NOT START HERE?</Question>
@@ -48,8 +49,10 @@ const CartProducts = () => {
         </Container>
         <StyledButton>ADD TO CART</StyledButton>
       </Suggestion>
-    </StyledCartProducts>
+
+   
+    </StyledCartSuggestion>
   );
 };
 
-export default CartProducts;
+export default CartSuggestion;

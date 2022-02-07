@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledCartProducts = styled.div`
+export const StyledCartSuggestion = styled.div`
   position: relative;
   text-align: center;
   height: 50vh;
@@ -39,12 +39,12 @@ export const Question = styled.div`
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
- 
+  height: 18vh;
+  margin: 0.2rem;
   flex-direction: row;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.primaryLight};
   width: 100%;
-  height: 100%;
 `;
 export const Left = styled.div`
   flex: 1;
@@ -68,7 +68,7 @@ export const ProductTitle = styled.div`
   font-weight: 800;
   font-size: 1.5rem;
   line-height: 1.5rem;
-  padding: 0.5em 1em;
+padding-top:0.3em;
 `;
 
 export const Span = styled.span`
@@ -127,3 +127,4 @@ export const StyledButton = styled.button`
   }
 
 `;
+

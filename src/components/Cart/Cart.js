@@ -1,7 +1,8 @@
 import { bool } from "prop-types";
 import { StyledMenu,CartTitle } from "./Cart.Styled";
 import CartAnnouncement from "../CartAnnouncement";
-import CartProducts from "../CartProducts";
+import CartSuggestion from "../CartSuggestion";
+import CartCheckout from "../CartCheckout";
 
 
 
@@ -10,7 +11,8 @@ const Menu = ({ open }) => {
     <StyledMenu open={open}>
     <CartTitle>YOUR CART</CartTitle>
     <CartAnnouncement/>
-    <CartProducts />
+    <CartSuggestion />
+    <CartCheckout/>
     </StyledMenu>
   );
 };
