@@ -17,7 +17,7 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   background: ${({ theme }) => theme.primaryLight};
-  height: 92vh;
+  height: 100vh;
   text-align: left;
   padding-top: 5.2em;
   position: absolute;
@@ -36,7 +36,6 @@ export const StyledMenu = styled.nav`
     text-transform: uppercase;
     padding: 2rem 0;
     font-weight: bold;
-    /* color: ${({ theme }) => theme.primaryDark}; */
     text-decoration: none;
     transition: color 0.3s linear;
 

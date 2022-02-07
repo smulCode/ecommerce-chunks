@@ -7,4 +7,5 @@ export const theme = {
   mobile: '576px',
   secondaryBg: "#F2E8D9",
   secondaryAccent: "#f9c0d8"
+  
 }

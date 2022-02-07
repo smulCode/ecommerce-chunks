@@ -1,11 +1,8 @@
-// Burger.styled.js
-import styled from 'styled-components';
-
-
+import styled from "styled-components";
 
 export const StyledBurger = styled.button`
   position: absolute;
-  top:1em;
+  top: 1em;
   right: 1rem;
   display: flex;
   flex-direction: column;
@@ -17,49 +14,44 @@ export const StyledBurger = styled.button`
   cursor: pointer;
   padding: 0;
   z-index: 10;
-  
+
   &:focus {
     outline: none;
   }
-  
-  h1{
+
+  h1 {
     position: absolute;
-  top:1em;
-  left: 1rem;
+    top: 1em;
+    left: 1rem;
   }
   div {
-    display:${({ open }) => open ? "block" : "none"};
+    display: ${({ open }) => (open ? "block" : "none")};
     width: 2rem;
     height: 0.25rem;
-    background: ${({ theme, open }) => open ? theme.primaryDark : theme.primaryLight};
+    background: ${({ theme, open }) =>
+      open ? theme.primaryDark : theme.primaryLight};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
-  
+
     :first-child {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
 
     :nth-child(2) {
-      opacity: ${({ open }) => open ? '0' : '1'};
-      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+      opacity: ${({ open }) => (open ? "0" : "1")};
+      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
     }
 
     :nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
-
-
-   
   }
 
-  svg{
-    
-      display:${({ open }) => open ? "none" : "block"};
-      color: ${({ theme, open }) => open ? theme.primaryLight: theme.primaryAccent};
-  
-    }
-
- 
+  svg {
+    display: ${({ open }) => (open ? "none" : "block")};
+    color: ${({ theme, open }) =>
+      open ? theme.primaryLight : theme.primaryAccent};
+  }
 `;
