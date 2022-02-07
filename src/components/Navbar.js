@@ -32,13 +32,17 @@ const Left = styled.div`
 const Center = styled.div`
   flex: 1;
   text-align: center;
+  z-index: 100;
 `;
 
 const Logo = styled.h1`
   font-weight: bold;
+  z-index: 100;
+  color: ${({ theme, open }) => open ? theme.primaryDark : theme.primaryAccent};
   a {
     text-decoration: none;
-    color: inherit;
+    
+
   }
 `;
 const Right = styled.div`
@@ -52,6 +56,8 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  z-index: 10;
+  color: ${({ theme, open }) => open ? theme.primaryDark : theme.primaryLight};
 `;
 
 const Navbar = () => {
@@ -66,19 +72,19 @@ const Navbar = () => {
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
         </Left>
-        <Center>
-          <Logo>
+        <Center >
+          <Logo  open={open} setOpen={setOpen}>
             <Link to="/">CHUNKS!</Link>
           </Logo>
         </Center>
         <Right>
-          <MenuItem>
+          <MenuItem open={open} setOpen={setOpen}>
           <Link to="/Login">
           <PersonOutlineOutlinedIcon />
               </Link>
             
           </MenuItem>
-          <MenuItem>
+          <MenuItem open={open} setOpen={setOpen}>
             <Badge badgeContent={4} color="primary">
               <Link to="/Cart">
                 <ShoppingCartOutlinedIcon />

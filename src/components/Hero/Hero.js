@@ -78,7 +78,6 @@ const Span = styled.span`
   font-style: italic;
   font-weight: 900;
   line-height: 28px;
-  letter-spacing: -0.045em;
   -webkit-text-stroke: 1px white;
   -webkit-background-clip: text;
   -webkit-text-fill-color: ${({ theme }) => theme.primaryAccent};

@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
 *::before,
 *::after {
   box-sizing: border-box;
+  letter-spacing: -0.045em;
 }
 
 /* Remove default margin */
@@ -37,6 +38,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+
 
 }
 
