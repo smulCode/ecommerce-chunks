@@ -6,6 +6,8 @@ export const theme = {
   primaryHover: '#343078',
   mobile: '576px',
   secondaryBg: "#F2E8D9",
-  secondaryAccent: "#f9c0d8"
+  secondaryAccent: "#f9c0d8",
+  checkoutBg: "#FFD234",
+  checkoutBtn: "#7C6918",
   
 }

@@ -4,6 +4,7 @@ import { StyledMenu, StyledButton, Wrapper, BrandTitle } from "./Menu.styled";
 import { Link } from "react-router-dom";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 
 const Menu = ({ open }) => {
   return (

@@ -13,7 +13,6 @@ export const CartTitle = styled.h2`
   background-color: ${({ theme }) => theme.secondaryBg};
 `;
 export const StyledMenu = styled.nav`
-  position: relative;
   display: flex;
   flex-direction: column;
   background: ${({ theme }) => theme.primaryLight};
@@ -22,10 +21,11 @@ export const StyledMenu = styled.nav`
   padding-top: 5.2em;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   z-index: 3;
+
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;

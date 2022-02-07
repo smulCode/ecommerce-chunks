@@ -1,31 +1,25 @@
 import styled from "styled-components";
-import {mobile}  from "../responsive"
+import {mobile}  from "../responsive";
+import Navbar from "../components/Navbar";
 
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
-      center;
+  background-color: ${({ theme }) => theme.secondaryBg};
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 `;
 
 const Wrapper = styled.div`
-  width: 25%;
+  width: 100%;
   padding: 20px;
-  background-color: white;
-  ${mobile({width:"75%"})}
+  
 `;
 
 const Title = styled.h1`
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 4rem;
+  text-align: center;
+
 `;
 
 const Form = styled.form`
@@ -35,9 +29,11 @@ const Form = styled.form`
 
 const Input = styled.input`
   flex: 1;
-  min-width: 40%;
-  margin: 10px 0;
-  padding: 10px;
+  min-width: 20%;
+  margin: 5px 0;
+  padding: 1em;
+  border-radius:8px;
+  border: none;
 `;
 
 const Button = styled.button`
@@ -57,17 +53,22 @@ const Link = styled.a`
   cursor: pointer;
 `;
 
+const Message = styled.p`
+  
+`;
+
 const Login = () => {
   return (
     <Container>
+      <Navbar color="black"/>
       <Wrapper>
-        <Title>SIGN IN</Title>
+        <Title>LOG IN</Title>
+        <Message>NOTE: Account login and management is only available for customers with active subscription orders</Message>
         <Form>
-          <Input placeholder="username" />
-          <Input placeholder="password" />
+          <Input placeholder="Email" />
+          <Input placeholder="Password" />
           <Button>LOGIN</Button>
-          <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          <Link>FORGOT PASSWORD?</Link>
         </Form>
       </Wrapper>
     </Container>
