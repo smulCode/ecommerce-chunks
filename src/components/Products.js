@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { popularProducts } from "../data";
+// import { popularProducts } from "../data";
 import Product from "./Product";
 import { useState, useEffect } from "react";
 
@@ -14,9 +14,9 @@ const Products = ({ cat, filters, sort }) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
 
-useEffect(() => {
-  setProducts(popularProducts)
-},[cat])
+// useEffect(() => {
+//   setProducts(popularProducts)
+// },[cat])
 
 
 

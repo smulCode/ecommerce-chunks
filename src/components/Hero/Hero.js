@@ -3,6 +3,7 @@ import wrapperBg from "../../assets/IMG/wrapper-choco.jpg";
 import chocoBar from "../../assets/IMG/choco-part-bar.png";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Button from "../Button";
+import { Link } from "react-router-dom";
 
 
 const Container = styled.div`
@@ -139,7 +140,11 @@ const Hero = () => {
         </Title>
         <SubTitle>Plant-based candy bars zero sugar</SubTitle>
       </BottomContent>
-      <Button text={"BUY NOW"}/>
+     
+      <Link to="Product">
+      <Button text={"BUY NOW"} shadowColor="#fff" color="#191D1E" bgColor="#EB3581" width="176px">
+      </Button>
+      </Link>
       <KeyboardArrowDownIcon/>
     </Container>
   );

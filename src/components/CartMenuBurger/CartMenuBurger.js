@@ -4,9 +4,9 @@ import { StyledBurger } from './CartMenuBurger.styled';
 import Badge from "@mui/material/Badge";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
-const Burger = ({ open, setOpen }) => {
+const Burger = ({ open, setOpen,color }) => {
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger color={color} open={open} onClick={() => setOpen(!open)}>
       <div />
       <div /> 
       <div />

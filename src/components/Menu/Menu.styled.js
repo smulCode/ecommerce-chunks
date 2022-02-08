@@ -24,6 +24,19 @@ export const StyledButton = styled.button`
     letter-spacing: -0.045em;
   }
 `;
+export const Nav = styled.nav`
+  position: absolute;
+  inset: 0;
+  /* display: flex;
+  gap: 0.5em; */
+`;
+
+export const Container = styled.div`
+  position: absolute;
+  right: 4em;
+  top: 1.1em;
+  border:1px solid red;
+`;
 
 export const Wrapper = styled.div`
   display: flex;
@@ -46,6 +59,7 @@ export const StyledMenu = styled.nav`
   flex-direction: column;
   background: ${({ theme }) => theme.primaryLight};
   height: 92vh;
+  width: 100%;
   text-align: left;
   padding: 2rem;
   padding-top: 4em;

@@ -1,14 +1,39 @@
-import React from "react";
+import { useState } from "react";
 import { bool } from "prop-types";
-import { StyledMenu, StyledButton, Wrapper, BrandTitle } from "./Menu.styled";
+import {
+  StyledMenu,
+  StyledButton,
+  Wrapper,
+  BrandTitle,
+  Nav,
+  Container,
+} from "./Menu.styled";
+
 import { Link } from "react-router-dom";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import CartMenuBurger from "../CartMenuBurger";
+import Cart from "../Cart";
+ 
 
 const Menu = ({ open }) => {
+  const [openCart, setOpenCart] = useState(false);
+
+
+
   return (
     <StyledMenu open={open}>
+      {/* <Nav>
+        <Container >
+          <Link to="/Login">
+            <PersonOutlineOutlinedIcon />
+          </Link>
+          </Container>
+          <CartMenuBurger open={openCart} setOpen={setOpenCart} />
+          <Cart open={openCart} setOpen={setOpenCart} />
+ 
+      </Nav> */}
       <StyledButton bgColor="DFC9C9" color="191D1E">
         <Link to="/">VARIETY PACK</Link>
       </StyledButton>
