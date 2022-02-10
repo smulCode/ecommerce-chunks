@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
+
   background-color: ${({ theme }) => theme.secondaryBg};
   background-size: cover;
 `;
@@ -15,6 +16,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 100%;
   padding: 20px;
+  padding-top:60px;
 `;
 
 const Title = styled.h1`

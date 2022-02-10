@@ -11,16 +11,16 @@ import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
-  /* color: ${({ theme }) => theme.primaryLight}; */
-  /* background: ${({ theme }) => theme.primaryDark}; */
+  position:fixed;
+  width: 100%;
   background-color: ${(props) => props.bgColor};
-  /* background-color:transparent; */
-
+  z-index: 100;
 `;
 
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   position: relative;

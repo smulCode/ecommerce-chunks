@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar  bgColor="#191D1E" LogoColor="transparent" color="#fff"/>
+      <Navbar  bgColor="transparent" LogoColor="transparent" color="#fff"/>
       {/* <Announcement /> */}
       <Hero/>
       

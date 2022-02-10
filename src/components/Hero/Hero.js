@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 const Container = styled.div`
   position: relative;
   height: 100vh;
+  padding-top:60px;
   background: ${({ theme }) => theme.primaryDark};
   color: ${({ theme }) => theme.primaryLight};
   text-align: center;
