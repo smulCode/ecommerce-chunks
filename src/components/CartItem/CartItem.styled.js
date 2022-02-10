@@ -8,7 +8,7 @@ background-color:${({ theme})=> theme.secondaryBg};
 export const Container = styled.div`
       display: flex;
   justify-content: space-between;
-  height: 18vh;
+  height: 100%;
   flex-direction: row;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.primaryLight};

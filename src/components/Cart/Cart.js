@@ -4,12 +4,11 @@ import CartAnnouncement from "../CartAnnouncement";
 import CartSuggestion from "../CartSuggestion";
 import CartCheckout from "../CartCheckout";
 import CartItem from "../CartItem";
-
+import { useSelector, useDispatch } from "react-redux";
 
 
 const Menu = ({ open }) => {
-
-
+const products = useSelector((state) => state.productsReducer);
   return (
     <StyledMenu open={open}>
     <CartTitle>YOUR CART</CartTitle>
