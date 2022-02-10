@@ -5,10 +5,10 @@ import {
   Question,
   StyledButton,
 } from "./CartSuggestion.styled";
-import {addToCart} from "../../actions";
+import { addToCart } from "../../actions";
 import { useSelector, useDispatch } from "react-redux";
 import CartItem from "../CartItem";
-import {useState} from "react"
+import { useState } from "react";
 
 const CartSuggestion = () => {
   const quantity = useSelector((state) => state.counterReducer);
@@ -20,24 +20,23 @@ const CartSuggestion = () => {
 
   let totalPrice = quantity * firstProduct.price;
 
-  const [display, setDisplay] = useState("block")
+  const [display, setDisplay] = useState("block");
 
-const removeRender = () => {
-  dispatch(addToCart(firstProduct,quantity,totalPrice))
-  setDisplay("none")
-}
-
+  const removeRender = () => {
+    dispatch(addToCart(firstProduct, quantity, totalPrice));
+    setDisplay("none");
+  };
 
   return (
     <>
-    <StyledCartSuggestion display={display}>
-      <Message>YOUR CART IS EMPTY</Message>
-      <Suggestion>
-        <Question>WHY NOT START HERE?</Question>
-       <CartItem product={firstProduct}/>
-        <StyledButton onClick={removeRender} >ADD TO CART</StyledButton>
-      </Suggestion>
-    </StyledCartSuggestion>
+      <StyledCartSuggestion display={display}>
+        <Message>YOUR CART IS EMPTY</Message>
+        <Suggestion>
+          <Question>WHY NOT START HERE?</Question>
+          <CartItem product={firstProduct} />
+          <StyledButton onClick={removeRender}>ADD TO CART</StyledButton>
+        </Suggestion>
+      </StyledCartSuggestion>
     </>
   );
 };

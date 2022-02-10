@@ -5,14 +5,20 @@ import CartSuggestion from "../CartSuggestion";
 import CartCheckout from "../CartCheckout";
 import CartItem from "../CartItem";
 import { useSelector, useDispatch } from "react-redux";
+import {useState,useEffect} from "react"
 
 
 const Menu = ({ open }) => {
 const products = useSelector((state) => state.productsReducer);
+
+
+
+
   return (
     <StyledMenu open={open}>
     <CartTitle>YOUR CART</CartTitle>
     <CartAnnouncement/>
+    {products.currentItem ? (<CartItem product={products.currentItem.id}/>): ("nope")}
     <CartSuggestion />
     <CartCheckout/>
     </StyledMenu>

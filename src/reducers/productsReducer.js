@@ -1,7 +1,6 @@
 
 const productsReducer = ( state = [], action) => {
-console.log(state)
-console.log(action.payload)
+
 
 
     switch(action.type) {

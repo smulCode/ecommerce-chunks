@@ -12,14 +12,18 @@ import {
 } from "./CartItem.styled";
 import { useSelector, useDispatch } from "react-redux";
 import Counter from "../Counter";
+import {useState,useEffect} from "react"
 
 const CartItem = ({product}) => {
   const quantity = useSelector((state) => state.counterReducer);
   const dispatch = useDispatch();
 
-  let id = 0;
+
 
   let totalPrice = quantity * product.price;
+
+
+  
   return (
     <StyledCardItem>
       <Container>
@@ -33,7 +37,7 @@ const CartItem = ({product}) => {
             <Span> 8 Pack</Span>
           </ProductTitle>
           <Wrapper>
-            <Counter border="white" />
+            <Counter border="white" product={product} quantity={quantity} totalPrice={totalPrice}  />
           </Wrapper>
         </Center>
 
