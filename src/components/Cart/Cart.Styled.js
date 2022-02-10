@@ -14,6 +14,7 @@ export const CartTitle = styled.h2`
   background-color: ${({ theme }) => theme.secondaryBg};
 `;
 export const StyledMenu = styled.nav`
+
   display: flex;
   flex-direction: column;
   background: ${({ theme }) => theme.primaryLight};
@@ -21,6 +22,7 @@ export const StyledMenu = styled.nav`
   text-align: left;
   padding-top: 5.2em;
   position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;

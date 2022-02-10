@@ -4,6 +4,8 @@ export const StyledCheckout = styled.div`
   padding: 1rem 1rem;
   background-color: ${({ theme }) => theme.checkoutBg};
   color: ${({ theme }) => theme.primaryDark};
+  height: 21vh;
+  
 `;
 export const Wrapper = styled.div`
   position: relative;

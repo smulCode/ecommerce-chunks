@@ -56,7 +56,6 @@ const Right = styled.div`
 
 const MenuItem = styled.div`
   font-size: 14px;
-  cursor: pointer;
   margin-left: 35px;
   color: ${(props) => props.color};
   /* z-index: 10; */

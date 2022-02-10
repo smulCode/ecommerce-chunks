@@ -13,7 +13,7 @@ export const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-
+  
 
   &:focus {
     outline: none;
@@ -25,29 +25,19 @@ export const StyledBurger = styled.button`
     left: 1rem;
   }
   div {
+   svg{
     display: ${({ open }) => (open ? "block" : "none")};
-    width: 2rem;
-    height: 0.25rem;
-    background: ${({ color, open }) =>
+    color: ${({ color, open }) =>
       open ? "#999" : color};
-    border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
     z-index: 10;
+    position: fixed;
+    font-size:2em;
+    top:1.4rem;
+   }
 
-    :first-child {
-      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
-    }
-
-    :nth-child(2) {
-      opacity: ${({ open }) => (open ? "0" : "1")};
-      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
-    }
-
-    :nth-child(3) {
-      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
-    }
   }
 
   svg {
