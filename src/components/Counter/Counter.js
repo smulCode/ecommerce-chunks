@@ -10,12 +10,12 @@ const Counter = ({border}) => {
 
   const dispatch = useDispatch();
 
+  // console.log(numb * 18)
   return (
     <StyledCounter border={border}>
       <button onClick={() => dispatch(decrement())}>
         <RemoveIcon />
       </button>
-
       <Quantity>{Math.round((numb + Number.EPSILON) * 100) / 100}</Quantity>
       <button onClick={() => dispatch(increment(18.00))}>
         <AddIcon />

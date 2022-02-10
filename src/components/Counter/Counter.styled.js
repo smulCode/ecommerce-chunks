@@ -18,6 +18,10 @@ export const StyledCounter = styled.div`
   button{
     background-color:transparent;
     border:none;
+
+    &:hover{
+      cursor: pointer;
+    }
  
   }
 `;
@@ -25,6 +29,6 @@ export const StyledCounter = styled.div`
 export const Quantity = styled.p`
   font-weight:600;
   font-size:1.2rem;
-  padding:1em 1vw;
+  padding:0 1em ;
   
 `;
