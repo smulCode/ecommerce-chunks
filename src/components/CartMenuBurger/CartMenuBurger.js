@@ -6,6 +6,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 const Burger = ({ open, setOpen,color }) => {
   return (
+    
     <StyledBurger color={color} open={open} onClick={() => setOpen(!open)}>
       <div />
       <div /> 

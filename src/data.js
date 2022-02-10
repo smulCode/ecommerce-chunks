@@ -1,8 +1,14 @@
+import VARIETYPACK from './assets/IMG/Chocolate-Bar-Packaging-Mockup-removebg-preview.png';
+import mockup from "./assets/IMG/Snack-Bar-Mockup-removebg-preview.png"
+
+
+
+
 export const Products = [
   {
     id: 1,
     name: "VARIETY PACK",
-    img: "./assets/IMG/Chocolate-Bar-Packaging-Mockup-removebg-preview.png",
+    img: VARIETYPACK,
     price: 18.99,
     priceSubs: 16.00,
     category:"Multipack",
@@ -13,8 +19,8 @@ export const Products = [
   },
   {
     id: 2,
-    name: "SAlTED PEANUT",
-    img: "./assets/IMG/Snack-Bar-Mockup-removebg-preview.png",
+    name: "SALTED PEANUT",
+    img: mockup,
     price: 18.99,
     priceSubs: 16.00,
     category:"Multipack",
@@ -26,7 +32,7 @@ export const Products = [
   {
     id: 3,
     name: "HAZELNUT CAFE",
-    img: "./assets/IMG/Snack-Bar-Mockup-removebg-preview.png",
+    img: mockup,
     price: 18.99,
     priceSubs: 16.00,
     category:"Multipack",
@@ -38,7 +44,7 @@ export const Products = [
   {
     id: 4,
     name: "ALMOND HORCHATA",
-    img: "./assets/IMG/Snack-Bar-Mockup-removebg-preview.png",
+    img: mockup,
     price: 18.99,
     priceSubs: 16.00,
     category:"Multipack",
@@ -50,7 +56,7 @@ export const Products = [
   {
     id: 5,
     name: "DOUBLE DARK MINT",
-    img: "./assets/IMG/Snack-Bar-Mockup-removebg-preview.png",
+    img: mockup,
     price: 18.99,
     priceSubs: 16.00,
     category:"Multipack",
@@ -61,8 +67,8 @@ export const Products = [
   },
   {
     id: 6,
-    name: "DOUBLE DARK MINT",
-    img: "./assets/IMG/Snack-Bar-Mockup-removebg-preview.png",
+    name: "BANANA PECAN",
+    img: mockup,
     price: 18.99,
     priceSubs: 16.00,
     category:"Multipack",

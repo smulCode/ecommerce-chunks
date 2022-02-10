@@ -40,9 +40,10 @@ export const increment = (nr) => {
     payload:nr
   }
 }
-export const decrement = () => {
+export const decrement = (nr) => {
   return {
-    type: "DECREMENT"
+    type: "DECREMENT",
+    payload:nr
   }
 }
 

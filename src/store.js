@@ -1,9 +1,10 @@
 import { createStore } from 'redux'
 import allReducers from './reducers'
 import {Products} from './data'
-
+import { devToolsEnhancer } from '@redux-devtools/extension';
 
 export const store = createStore(
   allReducers,
 {productsReducer:Products},
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+devToolsEnhancer()
+);

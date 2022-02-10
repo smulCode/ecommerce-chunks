@@ -10,13 +10,14 @@ export const CartTitle = styled.h2`
   background-color: red;
   height: fit-content;
   padding: 1em;
+  
   background-color: ${({ theme }) => theme.secondaryBg};
 `;
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   background: ${({ theme }) => theme.primaryLight};
-  height: 100vh;
+  min-height: 100vh;
   text-align: left;
   padding-top: 5.2em;
   position: absolute;
