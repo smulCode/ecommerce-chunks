@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledCartSuggestion = styled.div`
+  display: ${(props)=> props.display} ;
   position: relative;
   text-align: center;
   height: 50vh;
@@ -30,7 +31,7 @@ export const Suggestion = styled.div`
   /* border: 1px solid red; */
   height: 35vh;
   width: 100%;
-  padding: 0.5rem;
+  
 `;
 export const Question = styled.div`
   font-size: 1.5rem;
@@ -111,7 +112,7 @@ export const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 95%;
   height: 8vh;
   background-color: ${({ theme }) => theme.primaryAccent};
   border-radius: 10px;
@@ -120,6 +121,7 @@ export const StyledButton = styled.button`
   color: ${({ theme }) => theme.secondaryBg};
   font-size:2rem;
   font-weight: 800;
+
 
   &:hover{
     cursor: pointer;

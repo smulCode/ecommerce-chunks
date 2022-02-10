@@ -5,6 +5,9 @@ export const StyledCheckout = styled.div`
   background-color: ${({ theme }) => theme.checkoutBg};
   color: ${({ theme }) => theme.primaryDark};
   height: 21vh;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
   
 `;
 export const Wrapper = styled.div`
