@@ -4,6 +4,7 @@ export const addToCart = (itemID) => {
     type: "ADD_TO_CART",
     payload: {
       id: itemID,
+      
     },
   };
 };
@@ -47,16 +48,6 @@ export const decrement = (nr) => {
   }
 }
 
-export const displayItem = (id) => {
-  return {
-    type: "DISPLAY_ITEM",
-    payload:id,
-  }
-}
-export const displayAll = () => {
-  return {
-    type: "DISPLAY_ALL",
-    
-  }
-}
+
+
 

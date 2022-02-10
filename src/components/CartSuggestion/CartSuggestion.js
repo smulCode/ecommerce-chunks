@@ -10,15 +10,14 @@ import {
   ProductTitle,
   Span,
   Wrapper,
-  Quantity,
+  
   Right,
   Price,
   StyledButton,
 
 } from "./CartSuggestion.styled";
 import doubleChocoBar from "../../assets/IMG/Chocolate-Bar-Packaging-Mockup-removebg-preview.png";
-import RemoveIcon from "@mui/icons-material/Remove";
-import AddIcon from "@mui/icons-material/Add";
+import Counter from "../Counter"
 
 const CartSuggestion = () => {
   return (
@@ -36,10 +35,9 @@ const CartSuggestion = () => {
               VARIETY PACK
               <Span> 8 Pack</Span>
             </ProductTitle>
-            <Wrapper>
-              <RemoveIcon />
-              <Quantity>1</Quantity>
-              <AddIcon />
+            <Wrapper> 
+
+           <Counter border="white"/>
             </Wrapper>
           </Center>
 
