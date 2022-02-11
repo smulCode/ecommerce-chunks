@@ -83,7 +83,7 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
         </Center>
         <Right>
           <MenuItem color={color} open={open} setOpen={setOpen}>
-            <Link to="/Login">
+            <Link to="/Login/">
               <PersonOutlineOutlinedIcon />
             </Link>
           </MenuItem>

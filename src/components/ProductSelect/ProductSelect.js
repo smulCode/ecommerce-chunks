@@ -9,21 +9,27 @@ const ProductSelect = () => {
   const [product, setProduct] = useState([]);
   const products = useSelector((state) => state.productsReducer);
   const {id} = useParams();
+
   const handleFilters = (e) => {
     const value = e.target.value;
 
     setSelected(value);
+  
   };
 
 
-  useEffect(() => {
-    setSelected(id)
-   console.log( id )
-  }, [])
+  // useEffect(() => {
+
+  //   setSelected(id)
+  
+  //  console.log( id )
+  // }, [])
   
   useEffect(() => {
     const findSelected = products.find((product) => product.name === selected);
     setProduct(findSelected);
+   
+    
   }, [selected]);
 
   const option =

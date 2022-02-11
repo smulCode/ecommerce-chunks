@@ -6,23 +6,23 @@ import Cart from "./pages/Cart";
 import GlobalStyles from "./components/styles/Global";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./components/styles/theme";
-import { Routes, Route,useParams} from "react-router-dom";
-
+import { Routes, Route, useParams } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
-
   const user = true;
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="Product/:id" element={<Product />} />
-          <Route path="Cart" element={<Cart />} />
-          <Route path="Login" element={<Login />} />
-          <Route path="Register" element={<Register />} />
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="Product/:id" element={<Product />} />
+            <Route path="Cart" element={<Cart />} />
+            <Route path="Login" element={<Login />} />
+          </Routes>
+        </ScrollToTop>
       </>
     </ThemeProvider>
   );

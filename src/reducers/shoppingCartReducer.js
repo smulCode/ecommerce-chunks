@@ -1,3 +1,10 @@
+
+
+const initState = {
+  items: [],
+  addedItems:[],
+  total: 0}
+
 const shoppingCartReducer = (state = [], action) => {
 
 
@@ -5,7 +12,8 @@ const shoppingCartReducer = (state = [], action) => {
 
  
     case "ADD_TO_CART":
-      
+      let addedItem = state.find(item=> item.id === action.id)
+      console.log(addedItem)
       return [
         ...state,
         action.payload]
