@@ -4,16 +4,13 @@ const productsReducer = ( state = [], action) => {
 
 
     switch(action.type) {
-      case "ADD_TO_CART":
-        return {
+      case "wADD_TO_CART":
+        return [
           ...state,
-          currentItem: action.payload,
-        };
+           action.payload,
+        ];
   
-        case "DISPLAY_ALL": 
-        return{
-          ...state
-        }
+     
         default : return state;
     }
   }

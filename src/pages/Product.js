@@ -3,14 +3,18 @@ import Navbar from "../components/Navbar";
 import ProductSelect from "../components/ProductSelect";
 import FixedShoppingCart from "../components/FixedShoppingCart";
 import Footer from "../components/Footer";
-
-
+import {useParams } from "react-router-dom"
+import { useSelector, useDispatch } from "react-redux";
 const Container = styled.div`
+
 `;
 
 
 
 const Product = () => {
+  const products = useSelector((state) => state.productsReducer);
+ const params = useParams();
+ 
 
   return (
     <Container>

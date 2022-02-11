@@ -10,7 +10,7 @@ import {useState,useEffect} from "react"
 
 const Menu = ({ open }) => {
 const products = useSelector((state) => state.productsReducer);
-
+const shoppingCartItem = useSelector((state) => state.shoppingCartReducer);
 
 
 
@@ -18,7 +18,7 @@ const products = useSelector((state) => state.productsReducer);
     <StyledMenu open={open}>
     <CartTitle>YOUR CART</CartTitle>
     <CartAnnouncement/>
-    {products.currentItem ? (<CartItem product={products.currentItem.id}/>): ("nope")}
+    {shoppingCartItem.id ? (<CartItem product={shoppingCartItem}/>): (" nope")}
     <CartSuggestion />
     <CartCheckout/>
     </StyledMenu>

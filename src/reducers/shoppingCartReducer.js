@@ -2,11 +2,14 @@ const shoppingCartReducer = (state = [], action) => {
 
 
   switch (action.type) {
+
+ 
     case "ADD_TO_CART":
-      return {
+      
+      return [
         ...state,
-        currentItem: action.payload,
-      };
+        action.payload]
+      
 
     default:
       return state;

@@ -7,11 +7,11 @@ export const StyledButton = styled.button`
   justify-content: center;
   width: 100%;
   height: 50px;
-  background-color: #${(props) => props.bgColor};
+  background-color: ${(props) => props.bgColor};
   border-radius: 10px;
   border: none;
   margin: 5px auto;
-  color: #${(props) => props.color};
+  color: ${(props) => props.color};
 
   a {
     font-style: normal;

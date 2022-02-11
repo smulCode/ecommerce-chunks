@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledProductSelect = styled.div`
   height: 100%;
+  padding-top:60px;
   /* border:1px solid red; */
 
 `;

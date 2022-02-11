@@ -9,6 +9,7 @@ export const StyledCartSuggestion = styled.div`
   padding-top: 1em;
   color: ${({ theme }) => theme.primaryDark};
   background-color: ${({ theme }) => theme.secondaryBg};
+
 `;
 
 export const Message = styled.div`

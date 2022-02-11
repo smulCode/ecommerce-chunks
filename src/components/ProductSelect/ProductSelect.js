@@ -2,20 +2,25 @@ import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { StyledProductSelect, Select, Option } from "./ProductSelect.styled";
 import { useSelector, useDispatch } from "react-redux";
+import { link, useParams } from "react-router-dom";
 
 const ProductSelect = () => {
-  const location = useLocation();
-  const cat = location.pathname.split("/")[2];
   const [selected, setSelected] = useState("VARIETY PACK");
   const [product, setProduct] = useState([]);
   const products = useSelector((state) => state.productsReducer);
-
+  const {id} = useParams();
   const handleFilters = (e) => {
     const value = e.target.value;
 
     setSelected(value);
   };
 
+
+  useEffect(() => {
+    setSelected(id)
+   console.log( id )
+  }, [])
+  
   useEffect(() => {
     const findSelected = products.find((product) => product.name === selected);
     setProduct(findSelected);

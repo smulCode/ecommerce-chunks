@@ -9,16 +9,31 @@ import {
   Container,
 } from "./Menu.styled";
 
-import { Link } from "react-router-dom";
+
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import CartMenuBurger from "../CartMenuBurger";
 import Cart from "../Cart";
- 
+import { useSelector, useDispatch } from "react-redux";
+import { Link, useParams } from "react-router-dom";
 
 const Menu = ({ open }) => {
   const [openCart, setOpenCart] = useState(false);
+  const {id} = useParams();
+
+  
+  const products = useSelector((state) => state.productsReducer);
+
+  const selection =
+  products &&
+  products.map((product) => {
+    return( 
+      <StyledButton key={product.id} bgColor={product.color} color={product.bgColor}>
+      <Link to={`/Product/${product.name}`}>{product.name}</Link>
+    </StyledButton>)
+
+  });
 
 
 
@@ -34,7 +49,8 @@ const Menu = ({ open }) => {
           <Cart open={openCart} setOpen={setOpenCart} />
  
       </Nav> */}
-      <StyledButton bgColor="DFC9C9" color="191D1E">
+      
+      {/* <StyledButton bgColor="DFC9C9" color="191D1E">
         <Link to="/">VARIETY PACK</Link>
       </StyledButton>
       <StyledButton bgColor="E54949" color="DFC9C9">
@@ -51,17 +67,17 @@ const Menu = ({ open }) => {
       </StyledButton>
       <StyledButton bgColor="96FFA0" color="AF7347">
         <Link to="/">DOUBLE DARK MINT</Link>
-      </StyledButton>
-
+      </StyledButton> */}
+{selection}
       <Wrapper>
-        <StyledButton bgColor="191D1E" color="FFF">
+        <StyledButton bgColor="#191D1E" color="#FFF">
           <Link to="/">CONTACT</Link>
         </StyledButton>
-        <StyledButton bgColor="191D1E" color="FFF">
+        <StyledButton bgColor="#191D1E" color="#FFF">
           <Link to="/">FAQ</Link>
         </StyledButton>
       </Wrapper>
-      <StyledButton bgColor="191D1E" color="FFF">
+      <StyledButton bgColor="#191D1E" color="#FFF">
         <Link to="/">LOGIN</Link>
       </StyledButton>
 

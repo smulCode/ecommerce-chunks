@@ -142,7 +142,7 @@ const Hero = () => {
         <SubTitle>Plant-based candy bars zero sugar</SubTitle>
       </BottomContent>
      
-      <Link to="Product">
+      <Link to="Product/VARIETY%20PACK">
       <Button text={"BUY NOW"} shadowColor="#fff" color="#191D1E" bgColor="#EB3581" width="176px">
       </Button>
       </Link>
