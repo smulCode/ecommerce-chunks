@@ -13,8 +13,7 @@ const Container = styled.div`
 
 const Product = () => {
   const products = useSelector((state) => state.productsReducer);
- const params = useParams();
- 
+
 
   return (
     <Container>
