@@ -1,87 +1,34 @@
-import { useState } from "react";
-import styled from "styled-components";
-import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
-import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
-// import { sliderItems } from "../../data";
-import { mobile } from "../../responsive";
 
+import {StyledSlider ,Arrow,Wrapper,Slide,ImgContainer,Image,InfoContainer,Title,Desc,Button} from "./slider.styled"
+import { useSelector } from "react-redux";
+import {useState,useEffect } from "react";
 
-const Container = styled.div`
-  width: 100%;
-  height: 100vh;
+import {  useParams } from "react-router-dom";
+import StarIcon from '@mui/icons-material/Star';
+import { Description } from "@mui/icons-material";
 
-  position: relative;
-  overflow: hidden;
-
-`;
-
-const Arrow = styled.div`
-  width: 50px;
-  height: 50px;
-  background-color: #fff7f7;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: ${(props) => props.direction === "left" && "10px"};
-  right: ${(props) => props.direction === "right" && "10px"};
-  margin: auto;
-  cursor: pointer;
-  opacity: 0.5;
-  z-index: 2;
-`;
-
-const Wrapper = styled.div`
-  height: 100%;
-  display: flex;
-  transition: all 1.5s ease;
-  transform: translateX(${(props) => props.slideIndex * -100}vw);
-`;
-
-const Slide = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  background-color: #${(props) => props.bg};
-`;
-
-const ImgContainer = styled.div`
-  height: 100%;
-  flex: 1;
-`;
-
-const Image = styled.img`
-  height: 80%;
-`;
-
-const InfoContainer = styled.div`
-  flex: 1;
-  padding: 50px;
-`;
-
-const Title = styled.h1`
-  font-size: 70px;
-`;
-
-const Desc = styled.p`
-  margin: 50px 0px;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 3px;
-`;
-
-const Button = styled.button`
-  padding: 10px;
-  font-size: 20px;
-  background-color: transparent;
-  cursor: pointer;
-`;
 
 const Slider = () => {
+
+  const products = useSelector((state) => state.productsReducer);
+  const [product, setProduct] = useState([]);
+const {id} = useParams();
+
+  
+
+
+
+  useEffect(() => {
+    const findSelected = products.find((product) => product.name === id);
+    setProduct(findSelected);
+    
+   
+  }, [id]);
+
+// const radioButton
+
+
+
   const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {
     if (direction === "left") {
@@ -90,29 +37,48 @@ const Slider = () => {
       setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
   };
+
+
+  const [selectedValue, setSelectedValue] = useState('a');
+  const handleChange = (event) => {
+    setSelectedValue(event.target.value);
+  };
+
+  const controlProps = (item) => ({
+    checked: selectedValue === item,
+    onChange: handleChange,
+    value: item,
+    name: 'size-radio-button-demo',
+    inputProps: { 'aria-label': item },
+  });
   return (
-    <Container>
-      <Arrow direction="left" onClick={() => handleClick("left")}>
-        <ArrowLeftOutlinedIcon />
-      </Arrow>
-      <Wrapper slideIndex={slideIndex}>
-        {/* {sliderItems.map((item) => (
-          <Slide bg={item.bg} key={item.id}>
-            <ImgContainer>
-              <Image src={item.img} />
-            </ImgContainer>
-            <InfoContainer>
-              <Title>{item.title}</Title>
-              <Desc>{item.desc}</Desc>
-              <Button>SHOW NOW</Button>
-            </InfoContainer>
-          </Slide>
-        ))} */}
+
+    <StyledSlider>
+      <Wrapper> 
+      <RadioButton/>
+      <RadioButton/>
+      <RadioButton/>
+      <RadioButton/>
       </Wrapper>
-      <Arrow direction="right" onClick={() => handleClick("right")}>
-        <ArrowRightOutlinedIcon />
-      </Arrow>
-    </Container>
+
+
+<ImgContainer> 
+<Image/>
+</ImgContainer> 
+
+<ReviewScore>
+<StarIcon/>
+<StarIcon/>
+<StarIcon/>
+<StarIcon/>
+<StarIcon/>
+<AmountReviews>(23)</AmountReviews>
+</ReviewScore>
+
+<Description>Nuts</Description>
+
+ 
+    </StyledSlider>
   );
 };
 

@@ -16,34 +16,39 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import CartMenuBurger from "../CartMenuBurger";
 import Cart from "../Cart";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams,useNavigate } from "react-router-dom";
 import {useEffect,useRef} from "react"
 
-const Menu = ({ open }) => {
-  const [openCart, setOpenCart] = useState(false);
-
+const Menu = ({ open, setOpen }) => {
 const [productName, setProductName] = useState("")
   const {id} = useParams();
-
-
-
-
   
   const products = useSelector((state) => state.productsReducer);
+  let  navigate = useNavigate();
 
+
+
+
+  const handleClick = (e) => {
+
+    setOpen(false)
+
+  };
+  
 
 
   const selection =
   products &&
   products.map((product) => {
+
     return( 
-      <StyledButton  key={product.id} bgColor={product.color} color={product.bgColor}>
-      <Link  to={`/Product/${product.name}`}>{product.name}</Link>
+      <StyledButton   key={product.id} bgColor={product.color} color={product.bgColor}>
+      <Link   to={`/Product/${product.name}`} onClick={()=> {handleClick()}} >{product.name}</Link>
     </StyledButton>)
 
   });
 
-  console.log("open "+ open)
+
 
 
   return (
@@ -59,7 +64,7 @@ const [productName, setProductName] = useState("")
  
       </Nav> */}
 
-      {selection}
+      {selection }
       <Wrapper>
         <StyledButton bgColor="#191D1E" color="#FFF">
           <Link to="/">CONTACT</Link>

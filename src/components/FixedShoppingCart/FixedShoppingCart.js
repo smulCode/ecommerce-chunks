@@ -2,11 +2,16 @@ import {StyledFixedShoppingCart,Container,Price,Span,Text,BottomText} from "./Fi
 import Button from "../Button";
 import Checkbox from '@mui/material/Checkbox';
 import { pink } from '@mui/material/colors';
-import {useState } from "react";
+import {useState,useEffect } from "react";
 import Counter from "../Counter/Counter";
+import { link, useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 const FixedShoppingCart = () => {
-  
+  const products = useSelector((state) => state.productsReducer);
+  const [product, setProduct] = useState([]);
+const {id} = useParams();
+
 
   
 
@@ -18,6 +23,13 @@ const FixedShoppingCart = () => {
     setChecked(event.target.checked);
   };
 
+
+  useEffect(() => {
+    const findSelected = products.find((product) => product.name === id);
+    setProduct(findSelected);
+    
+   
+  }, [id]);
 
   
 
@@ -35,7 +47,7 @@ const FixedShoppingCart = () => {
           },
         }} />
         <Price>
-          €18.00
+          €{product.price}
           <Span>/8 PACK</Span>
         </Price>
           <Text>One time Purchase</Text>
@@ -51,7 +63,7 @@ const FixedShoppingCart = () => {
           },
         }}/>
         <Price>
-          €16.00
+          €{product.priceSubs}
           <Span>/8 PACK</Span>
         </Price>
           <Text>Subscribe & save 15%</Text>
