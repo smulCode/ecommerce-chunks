@@ -4,13 +4,13 @@ const productsReducer = ( state = [], action) => {
 
 
     switch(action.type) {
-      case "ADD_TO_CART":
-        let addedItem = state.find(item=> item.id === action.id)
-        //check if the action id exists in the addedItems
-        console.log(addedItem)
+      case "ADD_TO_CART2":
+        // let addedItem = state.find(item=> item.name === action.name)
+        // //check if the action id exists in the addedItems
+    
         return [
           ...state,
-           action.payload,
+        action.payload,
         ];
   
      

@@ -12,6 +12,15 @@ const Menu = ({ open }) => {
 const products = useSelector((state) => state.productsReducer);
 const shoppingCartItem = useSelector((state) => state.shoppingCartReducer);
 
+const [items, setItems] = useState([])
+
+
+useEffect(() => {
+  setItems(shoppingCartItem)
+
+console.log(items)
+}, [])
+
 
 
   return (

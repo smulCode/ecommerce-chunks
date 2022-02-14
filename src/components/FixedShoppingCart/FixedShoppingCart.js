@@ -6,13 +6,14 @@ import {useState,useEffect } from "react";
 import Counter from "../Counter/Counter";
 import { link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "../../actions";
 
 const FixedShoppingCart = () => {
   const products = useSelector((state) => state.productsReducer);
   const [product, setProduct] = useState([]);
 const {id} = useParams();
 
-
+const dispatch = useDispatch();
   
 
   const [checked, setChecked] = useState(true);
@@ -72,6 +73,7 @@ const {id} = useParams();
       <Container>
        
 <Counter/>
+<button onClick={() => dispatch(addToCart(product))} > click</button>
         <Button  text="ADD TO CART" bgColor="#EB3581" color="#191D1E" shadowColor="#FFFF" width="100vw">ADD TO CART</Button>
       </Container>
 

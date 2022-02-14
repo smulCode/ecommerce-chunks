@@ -4,6 +4,8 @@ import { StyledProductSelect, Select, Option } from "./ProductSelect.styled";
 import { useSelector, useDispatch } from "react-redux";
 import { link, useParams } from "react-router-dom";
 
+
+
 const ProductSelect = () => {
   const [selected, setSelected] = useState("VARIETY PACK");
   const [product, setProduct] = useState([]);
@@ -39,12 +41,10 @@ const ProductSelect = () => {
   return (
     <StyledProductSelect>
       <Select name="name" onChange={handleFilters}>
+    
         {option}
       </Select>
 
-      <h1>{product.name}</h1>
-      <img src={product.img} alt={product.name} />
-      <p>{product.description}</p>
     </StyledProductSelect>
   );
 };

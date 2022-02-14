@@ -1,27 +1,43 @@
-
+import {Products} from "../data"
 
 const initState = {
-  items: [],
+  Products,
   addedItems:[],
-  total: 0}
+  total: 0
 
-const shoppingCartReducer = (state = [], action) => {
+}
 
-
-  switch (action.type) {
-
- 
-    case "ADD_TO_CART":
-      let addedItem = state.find(item=> item.id === action.id)
-      console.log(addedItem)
-      return [
+const shoppingCartReducer = (state = initState, action) => {
+console.log(state)
+console.log(action.payload)
+if(action.type === "ADD_TO_CART"){
+  let addedItem = state.Products.find(item => item.id === action.id)
+  //check if the action id exists in the addedItems
+  console.log(addedItem)
+//  let existed_item= state.addedItems.find(item => action.id === item.id)
+//  if(existed_item)
+//  {
+//     addedItem.quantity += 1 
+//      return{
+//         ...state,
+//          total: state.total + addedItem.price 
+//           }
+// }
+//  else{
+//     addedItem.quantity = 1;
+//     //calculating the total
+//     let newTotal = state.total + addedItem.price 
+    
+    return{
         ...state,
-        action.payload]
-      
+        addedItems: [action.payload],
+        total : 0
+    }
+    
+}
 
-    default:
-      return state;
-  }
-};
-
+else{
+return state
+}}
+// }
 export default shoppingCartReducer;

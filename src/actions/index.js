@@ -1,13 +1,12 @@
 
-export const addToCart = (itemID,quantity ,totalPrice) => {
+export const addToCart = (id) => {
   return {
     type: "ADD_TO_CART",
-    payload: {
-      id: itemID,
-      quantity: quantity,
-      totalPrice: totalPrice,
+    id,
+      // quantity: quantity,
+      // totalPrice: totalPrice,
       
-    },
+    
   };
 };
 
