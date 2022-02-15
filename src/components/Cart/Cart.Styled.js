@@ -8,7 +8,7 @@ export const CartTitle = styled.h2`
   font-weight: 300;
   width: 100%;
   background-color: red;
-  height: fit-content;
+  min-height: fit-content;
   padding: 1em;
   
   background-color: ${({ theme }) => theme.secondaryBg};
@@ -34,6 +34,7 @@ export const StyledMenu = styled.nav`
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
+    
   }
 
   a {
@@ -56,3 +57,7 @@ export const StyledMenu = styled.nav`
 `;
 
 
+export const CartBag = styled.div`
+
+border:1px solid red;
+`;

@@ -1,5 +1,5 @@
 import { bool } from "prop-types";
-import { StyledMenu,CartTitle} from "./Cart.Styled";
+import { StyledMenu,CartTitle,CartBag} from "./Cart.Styled";
 import CartAnnouncement from "../CartAnnouncement";
 import CartSuggestion from "../CartSuggestion";
 import CartCheckout from "../CartCheckout";
@@ -11,17 +11,22 @@ import {useState,useEffect} from "react"
 const Menu = ({ open }) => {
 const shoppingCartItem = useSelector((state) => state.shoppingCartReducer);
 
+console.log(shoppingCartItem.total)
+
 
 
   return (
     <StyledMenu open={open}>
     <CartTitle>YOUR CART</CartTitle>
-    <CartAnnouncement/>
+    {shoppingCartItem.total >= 30 ? (<CartAnnouncement title={"CONGRATS! YOU QUALIFY FOR FREE SHIPPING!"} subTitle={""}  />) : <CartAnnouncement   /> }
  
+<CartBag> 
+
 
     {shoppingCartItem.addedItems ? (<CartItem items={shoppingCartItem.addedItems}/>): (" nope")}
  
  {shoppingCartItem.addedItems[0]  ? (""): ( <CartSuggestion />)}
+</CartBag>
    
     <CartCheckout total={shoppingCartItem.total}/>
     </StyledMenu>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledCartAnnouncement = styled.div`
-  height: 20vh;
+  height: fit-content;
   width: 100%;
   text-align: center;
   padding: 4vw 3em;

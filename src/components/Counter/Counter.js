@@ -5,12 +5,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { increment } from "../../actions";
 import { decrement } from "../../actions";
 import { AddQuantity, SubtractQuantity } from "../../actions";
+import {useEffect} from "react"
 
 const Counter = ({ border, product }) => {
   const numb = useSelector((state) => state.counterReducer);
   const itemsCart = useSelector((state) => state.shoppingCartReducer);
 
-  console.log(itemsCart)
+ 
   const addItem = () => {
     dispatch(AddQuantity(product.id));
     dispatch(increment());
@@ -22,6 +23,7 @@ const Counter = ({ border, product }) => {
 
   const dispatch = useDispatch();
 
+
   
 
   return (
@@ -30,7 +32,9 @@ const Counter = ({ border, product }) => {
         <RemoveIcon />
       </button>
       <Quantity>
-        {Math.round((numb + Number.EPSILON) * 100) / 100}
+
+        {product ? Math.round((product.quantity + Number.EPSILON) * 100) / 100 : 1 }
+        {/* // {Math.round((product.quantity + Number.EPSILON) * 100) / 100} */}
 
       </Quantity>
       <button onClick={addItem}>
