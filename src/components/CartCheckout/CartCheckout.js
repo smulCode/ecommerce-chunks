@@ -7,9 +7,7 @@ import {
 } from "./CartCheckout.styled";
 import { useSelector, useDispatch } from "react-redux";
 
-const CartCheckout = () => {
-  const products = useSelector((state) => state.productsReducer);
-
+const CartCheckout = ({total}) => {
 
 
   return (
@@ -17,9 +15,7 @@ const CartCheckout = () => {
       <Wrapper>
         <SubTotal>SUBTOTAL(EXCLUDING TAX + SHIPPING)</SubTotal>
         <PriceSummary>
-          €{products.currentItem ? 
-          Math.round((products.currentItem.totalPrice + Number.EPSILON) * 100) / 100
-          : 0.0}
+          €{total.toFixed(2)}
         </PriceSummary>
       </Wrapper>
       <CheckoutBtn>CHECKOUT NOW</CheckoutBtn>

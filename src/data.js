@@ -9,14 +9,15 @@ export const Products = [
     id: 1,
     name: "VARIETY PACK",
     img: VARIETYPACK,
-    imgSlider: [VARIETYPACK,mockup],
     price: 18.99,
     priceSubs: 16.00.toFixed(2),
     category:"Multipack",
     color: "#DFC9C9",
     bgColor: "gray",
     reviews: "69",
-    description: "Blissful flavor, with just a little bit of sweetness. The Big Four - Salted Peanut, Banana Pecan, Hazelnut Cafe and Almond Horchata - are all plant-based, and made with zero grams of sugar."
+    description: "Blissful flavor, with just a little bit of sweetness. The Big Four - Salted Peanut, Banana Pecan, Hazelnut Cafe and Almond Horchata - are all plant-based, and made with zero grams of sugar.",
+    
+
   },
   {
     id: 2,

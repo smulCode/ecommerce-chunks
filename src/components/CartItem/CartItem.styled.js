@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledCardItem = styled.div`
 padding:0.5rem;
+
 background-color:${({ theme})=> theme.secondaryBg};
 `;
 
@@ -13,6 +14,7 @@ export const Container = styled.div`
   border-radius: 10px;
   background-color: ${({ theme }) => theme.primaryLight};
   width: 100%;
+  margin:0.5em 0;
 `;
 
 export const Left = styled.div`

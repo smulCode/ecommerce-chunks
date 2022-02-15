@@ -6,29 +6,22 @@ import { increment } from "../../actions";
 import { decrement } from "../../actions";
 import {addToCart} from "../../actions";
 
-const Counter = ({border,product,quantity,totalPrice}) => {
+const Counter = ({border}) => {
   const numb = useSelector((state) => state.counterReducer);
 
   const dispatch = useDispatch();
 
-  
 
-const decrementItemQty = () => {
-  dispatch(addToCart(product,quantity,totalPrice))
-  dispatch(decrement())
-}
-const incrementItemQty = () => {
-  dispatch(addToCart(product,quantity,totalPrice))
-  dispatch(increment(18.00))
-}
+
+
 
   return (
     <StyledCounter border={border}>
-      <button onClick={decrementItemQty}>
+      <button onClick={()=> dispatch(decrement())}>
         <RemoveIcon />
       </button>
       <Quantity>{Math.round((numb + Number.EPSILON) * 100) / 100}</Quantity>
-      <button onClick={incrementItemQty}>
+      <button onClick={()=> dispatch(increment())}>
         <AddIcon />
       </button>
     </StyledCounter>

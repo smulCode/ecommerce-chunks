@@ -63,9 +63,15 @@ export const StyledButton = styled.button`
 
 `;
 
+//cartitem suggestion\
+
+export const CartItem = styled.div`
+  padding:0.5rem;
+`;
 
 export const Container = styled.div`
-      display: flex;
+
+  display: flex;
   justify-content: space-between;
   height: 100%;
   flex-direction: row;

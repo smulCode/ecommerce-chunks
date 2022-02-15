@@ -30,6 +30,8 @@ export const StyledMenu = styled.nav`
   z-index: 9;
 
 
+  
+
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
   }
@@ -52,3 +54,5 @@ export const StyledMenu = styled.nav`
     }
   }
 `;
+
+
