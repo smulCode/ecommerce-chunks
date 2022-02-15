@@ -26,6 +26,7 @@ const CartItem = ({items}) => {
   const itemsCart =
     items &&
     items.map((item) => {
+     let totalPrice = item.quantity * item.price;
       return (
         <Container key={item.id}>
         <Left>
@@ -38,12 +39,12 @@ const CartItem = ({items}) => {
             <Span> 8 Pack</Span>
           </ProductTitle>
           <Wrapper>
-            <Counter border="white"  quantity={item.quantity}  />
+            <Counter border="white"  product={item}  />
           </Wrapper>
         </Center>
 
         <Right>
-          <Price>{Math.round((item.price + Number.EPSILON) * 100) / 100}</Price>
+          <Price>{Math.round((totalPrice  + Number.EPSILON) * 100) / 100}</Price>
         </Right>
       </Container>
       )

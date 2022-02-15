@@ -28,7 +28,7 @@ const CartSuggestion = () => {
 
   const firstProduct = products[0];
 
-  // let totalPrice = quantity * firstProduct.price;
+  let totalPrice = quantity * firstProduct.price;
 
   const [display, setDisplay] = useState("block");
 
@@ -63,7 +63,7 @@ const CartSuggestion = () => {
         </Center>
 
         <Right>
-          {/* <Price>{Math.round((totalPrice + Number.EPSILON) * 100) / 100}</Price> */}
+          <Price>{Math.round((totalPrice + Number.EPSILON) * 100) / 100}</Price>
         </Right>
       </Container>
           </CartItem>

@@ -11,10 +11,6 @@ import {useState,useEffect} from "react"
 const Menu = ({ open }) => {
 const shoppingCartItem = useSelector((state) => state.shoppingCartReducer);
 
-const [items, setItems] = useState([])
-
-console.log(shoppingCartItem.addedItems)
-
 
 
   return (

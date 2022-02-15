@@ -17,6 +17,7 @@ import { addToCart } from "../../actions";
 
 const FixedShoppingCart = () => {
   const products = useSelector((state) => state.productsReducer);
+  
   const [product, setProduct] = useState([]);
   const { id } = useParams();
 
@@ -72,7 +73,7 @@ const FixedShoppingCart = () => {
       </Container>
 
       <Container>
-        <Counter />
+        <Counter product={product}/>
 
         <Button
           onClick={() => dispatch(addToCart(product.id))}
