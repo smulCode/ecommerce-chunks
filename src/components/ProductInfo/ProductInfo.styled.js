@@ -68,8 +68,10 @@ export const Circle = styled.div`
 
   export const Text = styled.p`
     padding:1em 2em;
-    font-weight: 300;
-    font-size:1.1rem
+    font-weight: 400;
+    font-size:1.1rem;
+
+
   `;
 
   export const Disclaimer = styled.p`

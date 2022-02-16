@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import ProductSelect from "../components/ProductSelect";
 import Slider from "../components/Slider";
+import ProductShowCase from "../components/ProductShowCase";
 import FixedShoppingCart from "../components/FixedShoppingCart";
 import ProductInfo from "../components/ProductInfo";
 import Footer from "../components/Footer";
@@ -17,7 +18,7 @@ const Container = styled.div`
   
 `;
 
-const Product = () => {
+const ProductPage = () => {
   const products = useSelector((state) => state.productsReducer);
   const [product, setProduct] = useState([]);
   const { id } = useParams();
@@ -32,7 +33,7 @@ const Product = () => {
     <Container>
        <Navbar  LogoColor={product.bgColor} color={product.bgColor}/>
       <ProductSelect  color={product.bgColor} />
-      <Slider color={product.bgColor}/>
+      <ProductShowCase color={product.bgColor}/>
       <FixedShoppingCart color={product.bgColor} />
       <ProductInfo color={product.color} bgColor={product.bgColor}/>
       <Footer color={product.bgColor} bgColor={product.color} />
@@ -40,4 +41,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default ProductPage;

@@ -4,15 +4,13 @@ import {
   RadioButton,
   ImgContainer,
   Image,
-  ReviewScore,
-  AmountReviews,
-  Description,
+
 } from "./slider.styled";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 
 import { useParams } from "react-router-dom";
-import StarIcon from "@mui/icons-material/Star";
+
 
 const Slider = ({color}) => {
   const products = useSelector((state) => state.productsReducer);
@@ -24,7 +22,7 @@ const Slider = ({color}) => {
     setProduct(findSelected);
   }, [id]);
 
-  // const [slideIndex, setSlideIndex] = useState(0);
+  const [slideIndex, setSlideIndex] = useState(0);
   // const handleClick = (direction) => {
   //   if (direction === "left") {
   //     setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
@@ -44,18 +42,10 @@ const Slider = ({color}) => {
 
       <ImgContainer>
         <Image src={product.img} />
+        <Image src={product.imgFront} />
       </ImgContainer>
 
-      <ReviewScore>
-        <StarIcon />
-        <StarIcon />
-        <StarIcon />
-        <StarIcon />
-        <StarIcon />
-        <AmountReviews>({product.reviews})</AmountReviews>
-      </ReviewScore>
-
-      <Description>{product.description}</Description>
+      
     </StyledSlider>
   );
 };

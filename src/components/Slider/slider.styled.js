@@ -7,7 +7,6 @@ export const StyledSlider = styled.div`
   flex-direction:column;
   width: 100%;
   height: 100%;
-  padding-bottom:10em;
   
 
   position: relative;
@@ -47,8 +46,9 @@ export const RadioButton = styled.button`
 export const ImgContainer = styled.div`
 
 /* border:1px solid red; */
-height:50vh;
-margin-top:-4em;
+/* height:50vh; */
+/* margin-top:-4em; */
+height:30vh;
 `;
 
 export const Image = styled.img`
@@ -76,10 +76,10 @@ export const Description = styled.p`
 display:flex;
 justify-content:center;
   align-items: center;
-  margin: 0 1em;
+  margin: 1em;
   font-size: 1.2em;
-  font-weight: 200;
   text-align: center;
+  font-weight:200;
 
   
 `;
