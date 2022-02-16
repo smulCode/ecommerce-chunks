@@ -18,7 +18,7 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   background: ${({ theme }) => theme.secondaryBg};
-  min-height: 100vh;
+  min-height: 100%;
   text-align: left;
   padding-top: 5.2em;
   position: absolute;
@@ -58,6 +58,11 @@ export const StyledMenu = styled.nav`
 
 
 export const CartBag = styled.div`
-
 border:1px solid red;
+/* display:flex; */
+
+overflow-y: auto;
+
+height: 55vh;
+
 `;

@@ -2,7 +2,6 @@ import Home from "./pages/Home";
 import Product from "./pages/Product";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import Cart from "./pages/Cart";
 import GlobalStyles from "./components/styles/Global";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./components/styles/theme";
@@ -19,7 +18,6 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="Product/:id" element={<Product />} />
-            <Route path="Cart" element={<Cart />} />
             <Route path="Login" element={<Login />} />
           </Routes>
         </ScrollToTop>

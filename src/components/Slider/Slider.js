@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import StarIcon from "@mui/icons-material/Star";
 
-const Slider = () => {
+const Slider = ({color}) => {
   const products = useSelector((state) => state.productsReducer);
   const [product, setProduct] = useState([]);
   const { id } = useParams();
@@ -36,10 +36,10 @@ const Slider = () => {
   return (
     <StyledSlider>
       <Wrapper>
-        <RadioButton />
-        <RadioButton />
-        <RadioButton />
-        <RadioButton />
+        <RadioButton color={color}/>
+        <RadioButton color={color}/>
+        <RadioButton color={color}/>
+        <RadioButton color={color}/>
       </Wrapper>
 
       <ImgContainer>

@@ -3,10 +3,10 @@ import Button from "../Button";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
-const Footer = () => {
+const Footer = ({color,bgColor}) => {
   return (
     <StyledFooter>
-      <Logo>CHUNKS!</Logo>
+      <Logo color={color} bgColor={bgColor}>CHUNKS!</Logo>
       <Text>LET’S PASS NOTES - SUBSCRIBE TO OUR EMAIL LIST.</Text>
       <Form>
         <Input placeholder="Email" />
@@ -14,7 +14,7 @@ const Footer = () => {
           text="SUBMIT"
           shadowColor="#FFF"
           color="#191D1E"
-          bgColor="#EB3581"
+          bgColor={color}
           width="100%"
         />
       </Form>
@@ -30,4 +30,9 @@ const Footer = () => {
   );
 };
 
+
+Footer.defaultProps = {
+  color: "#EB3581",
+  bgColor: "#EB3581",
+};
 export default Footer;

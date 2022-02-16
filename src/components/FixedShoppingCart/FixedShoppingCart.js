@@ -5,9 +5,9 @@ import {
   Span,
   Text,
   BottomText,
+  Checkbox,
 } from "./FixedShoppingCart.styled";
 import Button from "../Button";
-import Checkbox from "@mui/material/Checkbox";
 import { pink } from "@mui/material/colors";
 import { useState, useEffect } from "react";
 import Counter from "../Counter/Counter";
@@ -15,20 +15,16 @@ import { link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../actions";
 
-const FixedShoppingCart = () => {
+const FixedShoppingCart = ({color}) => {
   const products = useSelector((state) => state.productsReducer);
-  
+  const cartItems = useSelector((state) => state.shoppingCartReducer);
+
   const [product, setProduct] = useState([]);
   const { id } = useParams();
 
   const dispatch = useDispatch();
 
-  const [checked, setChecked] = useState(true);
-  const [unchecked, setUnChecked] = useState(false);
-
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
+  
 
   useEffect(() => {
     const findSelected = products.find((product) => product.name === id);
@@ -38,16 +34,7 @@ const FixedShoppingCart = () => {
   return (
     <StyledFixedShoppingCart>
       <Container>
-        <Checkbox
-          defaultChecked
-          onChange={handleChange}
-          sx={{
-            color: pink[800],
-            "&.Mui-checked": {
-              color: pink[600],
-            },
-          }}
-        />
+        <Checkbox type="checkbox" defaultChecked color={color}/>
         <Price>
           €{product.price}
           <Span>/8 PACK</Span>
@@ -55,15 +42,7 @@ const FixedShoppingCart = () => {
         <Text>One time Purchase</Text>
       </Container>
       <Container>
-        <Checkbox
-          onChange={handleChange}
-          checked={unchecked}
-          sx={{
-            color: pink[800],
-            "&.Mui-checked": {
-              color: pink[600],
-            },
-          }}
+        <Checkbox type="checkbox"  color={color}
         />
         <Price>
           €{product.priceSubs}
@@ -73,12 +52,12 @@ const FixedShoppingCart = () => {
       </Container>
 
       <Container>
-        <Counter product={product}/>
+        <Counter product={product} />
 
         <Button
           onClick={() => dispatch(addToCart(product.id))}
           text="ADD TO CART"
-          bgColor="#EB3581"
+          bgColor={color}
           color="#191D1E"
           shadowColor="#FFFF"
           width="100vw"

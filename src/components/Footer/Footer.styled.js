@@ -17,11 +17,11 @@ export const Logo = styled.div`
   font-weight: 800;
   font-style: italic;
   letter-spacing: -0.08em;
-  -webkit-text-stroke: 1px ${({ theme }) => theme.primaryAccent};
+  -webkit-text-stroke: 1px ${(props) => props.bgColor};
   -webkit-background-clip: text;
   -webkit-text-fill-color: ${({ theme }) => theme.primaryLight};
-  text-shadow: -4px 3px 0px ${({ theme }) => theme.primaryAccent},
-    -4px 4px 0px ${({ theme }) => theme.primaryAccent};
+  text-shadow: -4px 3px 0px ${(props) => props.bgColor},
+    -4px 4px 0px ${(props) => props.bgColor};
 `;
 
 export const Text = styled.p`

@@ -6,7 +6,9 @@ export const StyledSlider = styled.div`
   align-items:center;
   flex-direction:column;
   width: 100%;
-  height: 85vh;
+  height: 100%;
+  padding-bottom:10em;
+  
 
   position: relative;
   overflow: hidden;
@@ -26,14 +28,14 @@ export const RadioButton = styled.button`
   border:1px solid #999;
   background-color:transparent;
   transition: all 250ms ease-in-out;
-  margin: 0 1em;
+  margin:1em;
   z-index:2;
 
  
 
   &:focus{
-    background-color:${({ theme})=> theme.primaryAccent};
-  border:1px solid ${({ theme})=> theme.primaryAccent};
+    background-color:${(props) => props.color};
+  border:1px solid ${(props) => props.color};
 
   }
 
@@ -56,9 +58,9 @@ export const Image = styled.img`
 `;
 
 export const ReviewScore = styled.div`
-
+margin-top:-4em;
   display: flex;
-margin-top:-1em;
+/* margin-top:-1em; */
 
 
 svg{
@@ -75,8 +77,9 @@ display:flex;
 justify-content:center;
   align-items: center;
   margin: 0 1em;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: 200;
+  text-align: center;
 
   
 `;

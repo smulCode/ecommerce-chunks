@@ -19,10 +19,6 @@ const CartItem = ({items}) => {
   const dispatch = useDispatch();
 
 
-
-  // let totalPrice = quantity * items.price;
-
-
   const itemsCart =
     items &&
     items.map((item) => {

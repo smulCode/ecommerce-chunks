@@ -11,7 +11,7 @@ import {useState,useEffect} from "react"
 const Menu = ({ open }) => {
 const shoppingCartItem = useSelector((state) => state.shoppingCartReducer);
 
-console.log(shoppingCartItem.total)
+// console.log(shoppingCartItem.total)
 
 
 
@@ -26,6 +26,8 @@ console.log(shoppingCartItem.total)
     {shoppingCartItem.addedItems ? (<CartItem items={shoppingCartItem.addedItems}/>): (" nope")}
  
  {shoppingCartItem.addedItems[0]  ? (""): ( <CartSuggestion />)}
+
+
 </CartBag>
    
     <CartCheckout total={shoppingCartItem.total}/>
@@ -38,3 +40,5 @@ Menu.propTypes = {
   open: bool.isRequired,
 };
 export default Menu;
+
+

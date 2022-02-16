@@ -30,7 +30,7 @@ export const Select = styled.select`
   padding-right: 1em;
 
   &:focus {
-    color: hotpink;
+    color: ${(props) => props.color};
     /* border:1px solid white; */
   }
   &:hover {

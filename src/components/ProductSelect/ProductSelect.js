@@ -6,7 +6,7 @@ import { link, useParams } from "react-router-dom";
 
 
 
-const ProductSelect = () => {
+const ProductSelect = ({color}) => {
   const [selected, setSelected] = useState("VARIETY PACK");
   const [product, setProduct] = useState([]);
   const products = useSelector((state) => state.productsReducer);
@@ -37,10 +37,10 @@ const ProductSelect = () => {
       return <Option key={product.name}>{product.name}</Option>;
     });
 
-  //if option === selected setselcted index 0
+
   return (
     <StyledProductSelect>
-      <Select name="name" onChange={handleFilters}>
+      <Select color={color} name="name" onChange={handleFilters}>
     
         {option}
       </Select>

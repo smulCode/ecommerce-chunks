@@ -15,7 +15,6 @@ import {
   Price,
   CartItem,
 } from "./CartSuggestion.styled";
-import Counter from "../Counter";
 import { addToCart } from "../../actions";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
@@ -58,7 +57,7 @@ const CartSuggestion = () => {
             <Span> 8 Pack</Span>
           </ProductTitle>
           <Wrapper>
-            <Counter border="white"  />
+ 
           </Wrapper>
         </Center>
 

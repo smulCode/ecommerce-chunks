@@ -35,3 +35,9 @@ export const BottomText = styled.p`
   margin: 0 auto;
   font-size: 14px;
 `;
+
+
+export const Checkbox = styled.input`
+  border:1px solid ${(props) => props.color};
+  
+`;

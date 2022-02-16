@@ -8,10 +8,8 @@ import { AddQuantity, SubtractQuantity } from "../../actions";
 import {useEffect} from "react"
 
 const Counter = ({ border, product }) => {
-  const numb = useSelector((state) => state.counterReducer);
-  const itemsCart = useSelector((state) => state.shoppingCartReducer);
 
- 
+
   const addItem = () => {
     dispatch(AddQuantity(product.id));
     dispatch(increment());
@@ -24,23 +22,28 @@ const Counter = ({ border, product }) => {
   const dispatch = useDispatch();
 
 
-  
+
 
   return (
-    <StyledCounter border={border}>
+
+<>
+{ isNaN(product.quantity)? ("") : ( <StyledCounter border={border}>
       <button onClick={SubstractItem}>
         <RemoveIcon />
       </button>
       <Quantity>
 
-        {product ? Math.round((product.quantity + Number.EPSILON) * 100) / 100 : 1 }
-        {/* // {Math.round((product.quantity + Number.EPSILON) * 100) / 100} */}
+        {Math.round((product.quantity + Number.EPSILON) * 100) / 100  }
+     
 
       </Quantity>
       <button onClick={addItem}>
         <AddIcon />
       </button>
-    </StyledCounter>
+    </StyledCounter>) }
+
+</>    
+   
   );
 };
 
