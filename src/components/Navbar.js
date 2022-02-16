@@ -89,6 +89,7 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
           </MenuItem>
           <MenuItem open={open} setOpen={setOpen}>
             <CartMenuBurger
+              bgColor={bgColor}
               color={color}
               open={openCart}
               setOpen={setOpenCart}

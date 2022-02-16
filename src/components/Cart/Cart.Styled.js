@@ -58,11 +58,10 @@ export const StyledMenu = styled.nav`
 
 
 export const CartBag = styled.div`
-border:1px solid red;
-/* display:flex; */
+
 
 overflow-y: auto;
 
-height: 55vh;
+height: 57vh;
 
 `;

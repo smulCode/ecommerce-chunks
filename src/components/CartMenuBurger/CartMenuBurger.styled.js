@@ -42,7 +42,6 @@ export const StyledBurger = styled.button`
 
   svg {
     display: ${({ open }) => (open ? "none" : "block")};
-    color: ${({ theme, open }) =>
-      open ? theme.primaryLight : theme.primaryAccent};
+    color: ${(props) => props.color};
   }
 `;

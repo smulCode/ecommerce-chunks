@@ -4,14 +4,18 @@ import { StyledBurger } from './CartMenuBurger.styled';
 import Badge from "@mui/material/Badge";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import CloseIcon from '@mui/icons-material/Close';
-const Burger = ({ open, setOpen,color }) => {
+import { useSelector } from "react-redux";
+
+const Burger = ({ open, setOpen,color,bgColor }) => {
+  const items = useSelector((state) => state.shoppingCartReducer);
+
   return (
     
-    <StyledBurger color={color} open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger color={color} bgColor={bgColor} open={open} onClick={() => setOpen(!open)}>
       <div><CloseIcon/></div>
-      {/* <Badge  badgeContent={4 } color="secondary" > */}
-        <ShoppingCartOutlinedIcon />         
-       {/* </Badge> */}
+      <Badge  badgeContent={items.addedItems.length} color="secondary" >
+        <ShoppingCartOutlinedIcon  />         
+       </Badge>
     </StyledBurger>
     
   )

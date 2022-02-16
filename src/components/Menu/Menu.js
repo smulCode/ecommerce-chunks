@@ -59,9 +59,9 @@ const [productName, setProductName] = useState("")
             <PersonOutlineOutlinedIcon />
           </Link>
           </Container>
-          <CartMenuBurger open={openCart} setOpen={setOpenCart} />
-          <Cart open={openCart} setOpen={setOpenCart} />
- 
+           {/* <CartMenuBurger open={openCart} setOpen={setOpenCart} />
+          <Cart open={openCart} setOpen={setOpenCart} /> 
+
       </Nav> */}
 
       {selection }

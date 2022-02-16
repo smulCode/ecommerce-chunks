@@ -4,7 +4,7 @@ export const StyledCheckout = styled.div`
   padding: 1rem 1rem;
   background-color: ${({ theme }) => theme.checkoutBg};
   color: ${({ theme }) => theme.primaryDark};
-  height: 21vh;
+  height: 24vh;
   bottom: 0;
   position: absolute;
   width: 100%;

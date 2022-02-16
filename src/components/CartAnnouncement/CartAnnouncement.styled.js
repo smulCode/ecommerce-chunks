@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const StyledCartAnnouncement = styled.div`
-  min-height: fit-content;
+  height: fit-content;
   width: 100%;
   text-align: center;
-  padding: 2em;
+  padding: 1em;
   background-color: ${({ theme }) => theme.secondaryAccent};
 `;
 

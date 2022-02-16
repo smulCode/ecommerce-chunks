@@ -5,7 +5,7 @@ import {
   CheckoutBtn,
   Wrapper,
 } from "./CartCheckout.styled";
-import { useSelector, useDispatch } from "react-redux";
+
 
 const CartCheckout = ({total}) => {
 

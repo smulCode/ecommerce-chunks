@@ -18,7 +18,7 @@ const shoppingCartItem = useSelector((state) => state.shoppingCartReducer);
   return (
     <StyledMenu open={open}>
     <CartTitle>YOUR CART</CartTitle>
-    {shoppingCartItem.total >= 30 ? (<CartAnnouncement title={"CONGRATS! YOU QUALIFY FOR FREE SHIPPING!"} subTitle={""}  />) : <CartAnnouncement   /> }
+    {shoppingCartItem.total >= 30 ? (<CartAnnouncement title={" "} subTitle={"CONGRATS! YOU QUALIFY FOR FREE SHIPPING!"}   />) : <CartAnnouncement   /> }
  
 <CartBag> 
 

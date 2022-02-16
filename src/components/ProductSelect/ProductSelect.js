@@ -4,18 +4,16 @@ import { StyledProductSelect, Select, Option } from "./ProductSelect.styled";
 import { useSelector, useDispatch } from "react-redux";
 import { link, useParams } from "react-router-dom";
 
-
-
-const ProductSelect = ({color}) => {
+const ProductSelect = ({ color }) => {
   const [selected, setSelected] = useState("VARIETY PACK");
   const [product, setProduct] = useState([]);
   const products = useSelector((state) => state.productsReducer);
   const { id } = useParams();
 
-  const ref = useRef();
+
   let navigate = useNavigate();
 
-  const handleFilters = (e) => {
+  const handleSelection = (e) => {
     const value = e.target.value;
 
     setSelected(value);
@@ -24,6 +22,7 @@ const ProductSelect = ({color}) => {
 
   useEffect(() => {
     setSelected(id);
+   
   }, [id]);
 
   useEffect(() => {
@@ -37,14 +36,12 @@ const ProductSelect = ({color}) => {
       return <Option key={product.name}>{product.name}</Option>;
     });
 
-
   return (
     <StyledProductSelect>
-      <Select color={color} name="name" onChange={handleFilters}>
-    
+      <Select color={color} name="name" value={id} onChange={handleSelection} >
+      
         {option}
       </Select>
-
     </StyledProductSelect>
   );
 };
