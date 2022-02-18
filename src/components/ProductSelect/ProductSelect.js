@@ -4,6 +4,7 @@ import { StyledProductSelect, Select, Option } from "./ProductSelect.styled";
 import { useSelector, useDispatch } from "react-redux";
 import { link, useParams } from "react-router-dom";
 
+
 const ProductSelect = ({ color }) => {
   const [selected, setSelected] = useState("VARIETY PACK");
   const [product, setProduct] = useState([]);
