@@ -5,7 +5,7 @@ import {
   Text,
   Image
 
-} from './StyledFlavorSection'
+} from './FlavorSection.styled'
 import { Link } from "react-router-dom";
 import Button from '../Button'
 import VarietyPack from "../../assets/IMG/Chocolate-Bar-Packaging-Mockup-removebg-preview.png";

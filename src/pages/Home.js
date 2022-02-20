@@ -1,6 +1,7 @@
 import Announcement from "../components/Announcement";
 import Hero from "../components/Hero"
 import FlavorSection from "../components/FlavorSection"
+import ExtraFlavor from "../components/ExtraFlavor"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -14,6 +15,7 @@ const Home = () => {
       {/* <Announcement /> */}
       <Hero/>
       <FlavorSection/>
+      <ExtraFlavor/>
       
       
       <Footer/>
