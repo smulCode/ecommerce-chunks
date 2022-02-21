@@ -83,7 +83,7 @@ export const Products = [
     price: 18.50,
     priceSubs: (16.0).toFixed(2),
     category: "Multipack",
-    color: "#3e5047",
+    color: "#3e9a47",
     bgColor: "#f7d12f",
     reviews: "8",
     description:

@@ -10,7 +10,7 @@ import {
    Title,
    Text,
    Disclaimer,
-   FlexContainer
+   GridContainer
    
 
 
@@ -39,7 +39,7 @@ const ProductInfo = ({ color, bgColor }) => {
         <BigTitle>EASY ON THE SWEET STUFF</BigTitle>
       </Wrapper>
 
-<FlexContainer>
+<GridContainer>
 
       <Container>
         <Circle color={color}>
@@ -90,11 +90,11 @@ const ProductInfo = ({ color, bgColor }) => {
         With entirely plant-based,vegan recipes,these bars are practically* salads
         </Text>
 
-        <Disclaimer>
+        <Disclaimer style={{padding:"1.4rem"}}>
         *Not actually salads. More fun and more delicious than salads
         </Disclaimer>
       </Container>
-</FlexContainer>
+</GridContainer>
     </StyledProductInfo>
   );
 };

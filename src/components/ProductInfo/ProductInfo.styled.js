@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Medium,Large,ExtraExtraLarge } from "../../responsive";
+
 
  export const StyledProductInfo = styled.div`
  position: relative;
@@ -8,18 +10,21 @@ import styled from 'styled-components';
   padding-bottom:4em;
 `;
 
+
 export const  ChocoContainer = styled.div`
 position: absolute;
-  top: -5em;
+  top: -9em;
   left: 16.4%;
   right: 16%;
+/* border:1px solid; */
+height:30vh;
   
 `;
 
 export const Image = styled.img`
 height:100%;
 width:100%;
-object-fit:cover;
+object-fit:contain;
 
 `;
 
@@ -49,6 +54,9 @@ font-size: 2em;
 
 export const Container = styled.div`
   padding:1rem 0;
+
+  
+ 
   `;
 
 
@@ -56,14 +64,17 @@ export const Circle = styled.div`
     background-color: ${(props) => props.color};
     border-radius: 50%;
     height:fit-content;
-    width:60%;
+    width:100%;
     border: none;
     margin:0 auto;
-  
+    padding:2rem;
+
+ 
+
   `;
 
   export const Title = styled.h2`
-    
+    padding-top:1em;
   `;
 
   export const Text = styled.p`
@@ -80,8 +91,10 @@ export const Circle = styled.div`
      margin:0 auto;
      font-size:0.9;
      line-height: 0.9rem;
+
   `;
 
-  export const FlexContainer = styled.div`
-   
+  export const GridContainer = styled.div`
+
+   ${Medium({ display:"grid",gridTemplateColumns:"repeat(4,1fr)",gridGap:"1rem" ,padding:"2rem", width:"100%", })};
   `;
