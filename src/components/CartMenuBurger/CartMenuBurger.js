@@ -9,11 +9,14 @@ import { useSelector } from "react-redux";
 const Burger = ({ open, setOpen,color,bgColor }) => {
   const items = useSelector((state) => state.shoppingCartReducer);
 
+
+  let totalBagItems = items.total / items.Products[0].price;
+
   return (
     
     <StyledBurger color={color} bgColor={bgColor} open={open} onClick={() => setOpen(!open)}>
       <div><CloseIcon/></div>
-      <Badge  badgeContent={items.addedItems.length} color="secondary" >
+      <Badge  badgeContent={totalBagItems} color="secondary" >
         <ShoppingCartOutlinedIcon  />         
        </Badge>
     </StyledBurger>

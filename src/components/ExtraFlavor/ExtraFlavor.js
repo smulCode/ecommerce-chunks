@@ -32,7 +32,7 @@ const ExtraFlavor = () => {
         <Image src={chocoBar} />
       </ImgContainer>
 
-      <Link to="Product/VARIETY%20PACK">
+      <Link to="Product/DOUBLE%20DARK%20MINT">
         <Button
           text={"BUY NOW"}
           shadowColor="#191D1E"

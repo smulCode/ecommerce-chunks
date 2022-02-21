@@ -6,6 +6,7 @@ const initState = {
   total: 0.0,
 };
 
+
 const shoppingCartReducer = (state = initState, action) => {
   // console.log(state)
   // console.log(action.payload)

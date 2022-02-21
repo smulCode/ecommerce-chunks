@@ -8,13 +8,19 @@ import { AddQuantity, SubtractQuantity } from "../../actions";
 import {useEffect} from "react"
 
 const Counter = ({ border, product }) => {
+  const shoppingCartReducer = useSelector((state) => state.shoppingCartReducer);
 
-
+console.log(  shoppingCartReducer.total  )
   const addItem = () => {
+  
     dispatch(AddQuantity(product.id));
     dispatch(increment());
   };
   const SubstractItem = () => {
+    if(shoppingCartReducer.total === 0  || shoppingCartReducer.total < 1 ){
+      return 
+
+    }
     dispatch(SubtractQuantity(product.id));
     dispatch(decrement());
   };
@@ -33,7 +39,7 @@ const Counter = ({ border, product }) => {
       </button>
       <Quantity>
 
-        {Math.round((product.quantity + Number.EPSILON) * 100) / 100  }
+        {product.quantity}
      
 
       </Quantity>

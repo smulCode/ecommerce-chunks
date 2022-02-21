@@ -13,6 +13,8 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import Counter from "../Counter";
 import {useState,useEffect} from "react"
+import CloseIcon from '@mui/icons-material/Close';
+import { Remove } from "../../actions";
 
 const CartItem = ({items}) => {
   const shoppingCartReducer = useSelector((state) => state.shoppingCartReducer);
@@ -22,7 +24,8 @@ const CartItem = ({items}) => {
   const itemsCart =
     items &&
     items.map((item) => {
-     let totalPrice = item.quantity * item.price;
+     let totalPrice = item.quantity * Math.round((item.price  + Number.EPSILON) * 100) / 100;
+   
       return (
         <Container key={item.id}>
         <Left>
@@ -40,7 +43,8 @@ const CartItem = ({items}) => {
         </Center>
 
         <Right>
-          <Price>{Math.round((totalPrice  + Number.EPSILON) * 100) / 100}</Price>
+          <CloseIcon onClick={() => dispatch(Remove(item.id))}/>
+          <Price>€{totalPrice.toFixed(2)}</Price>
         </Right>
       </Container>
       )

@@ -24,7 +24,8 @@ const FixedShoppingCart = ({color}) => {
 
   const dispatch = useDispatch();
 
-  
+
+const BagCheck = cartItems.addedItems.find((item) => product.id === item.id)
 
   useEffect(() => {
     const findSelected = products.find((product) => product.name === id);
@@ -52,7 +53,8 @@ const FixedShoppingCart = ({color}) => {
       </Container>
 
       <Container>
-        <Counter product={product} />
+        {BagCheck ? (<Counter product={product} />): ("")}
+        
 
         <Button
           onClick={() => dispatch(addToCart(product.id))}

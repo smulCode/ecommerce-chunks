@@ -67,6 +67,12 @@ export const Right = styled.div`
   flex: 1;
   position: relative;
   align-items: flex-end;
+
+  svg{
+    position: absolute;
+    right:10%;
+    top:10%;
+  }
 `;
 
 export const Price = styled.p`

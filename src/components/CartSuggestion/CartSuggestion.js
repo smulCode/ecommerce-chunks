@@ -62,7 +62,7 @@ const CartSuggestion = () => {
         </Center>
 
         <Right>
-          <Price>{Math.round((totalPrice + Number.EPSILON) * 100) / 100}</Price>
+          <Price>{(firstProduct.price).toFixed(2)}</Price>
         </Right>
       </Container>
           </CartItem>

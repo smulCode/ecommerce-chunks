@@ -7,6 +7,9 @@ import {
   BrandTitle,
   Nav,
   Container,
+  Text,
+  Image,
+  ImgContainer
 } from "./Menu.styled";
 
 
@@ -42,8 +45,19 @@ const [productName, setProductName] = useState("")
   products.map((product) => {
 
     return( 
+      
       <StyledButton   key={product.id} bgColor={product.color} color={product.bgColor}>
-      <Link   to={`/Product/${product.name}`} onClick={()=> {handleClick()}} >{product.name}</Link>
+      <Link   to={`/Product/${product.name}`} onClick={()=> {handleClick()}} >
+        <Text>
+
+        {product.name}
+        </Text>
+      
+      <ImgContainer> 
+      <Image src={product.img}/>
+      
+      </ImgContainer>
+      </Link>
     </StyledButton>)
 
   });
@@ -53,16 +67,13 @@ const [productName, setProductName] = useState("")
 
   return (
     <StyledMenu open={open}>
-      {/* <Nav>
-        <Container >
-          <Link to="/Login">
-            <PersonOutlineOutlinedIcon />
-          </Link>
-          </Container>
-           {/* <CartMenuBurger open={openCart} setOpen={setOpenCart} />
+   {/* <Nav>
+     
+    
+      <CartMenuBurger open={openCart} setOpen={setOpenCart} />
           <Cart open={openCart} setOpen={setOpenCart} /> 
 
-      </Nav> */}
+      </Nav>  */}
 
       {selection }
       <Wrapper>
@@ -73,15 +84,18 @@ const [productName, setProductName] = useState("")
           <Link to="/">FAQ</Link>
         </StyledButton>
       </Wrapper>
+      <Container>
+        
       <StyledButton bgColor="#191D1E" color="#FFF">
-        <Link to="/">LOGIN</Link>
+        <Link to="/Login">LOGIN</Link>
       </StyledButton>
+         </Container>
 
       <Wrapper>
-        <div>
+        <>
           <FacebookIcon />
           <InstagramIcon />
-        </div>
+        </>
         <BrandTitle>© 2022 CHUNKS LLC</BrandTitle>
       </Wrapper>
     </StyledMenu>

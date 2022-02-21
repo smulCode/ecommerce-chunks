@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Medium,Large,ExtraExtraLarge } from "../../responsive";
+
 
 export const StyledFooter = styled.div`
   position: relative;
@@ -7,6 +9,9 @@ export const StyledFooter = styled.div`
   padding: 3rem;
   text-align: center;
   height: 100%;
+  ${Medium({padding:"3rem 30vw"})} ;
+
+
 `;
 export const Logo = styled.div`
   position: absolute;

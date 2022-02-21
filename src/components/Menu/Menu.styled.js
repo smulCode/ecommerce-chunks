@@ -1,29 +1,75 @@
 // Menu.styled.js
 import styled from "styled-components";
+import { Medium,Large,ExtraExtraLarge } from "../../responsive";
+
 
 export const StyledButton = styled.button`
+    position:relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 50px;
+  min-height: 100%;
   background-color: ${(props) => props.bgColor};
   border-radius: 10px;
   border: none;
   margin: 5px auto;
   color: ${(props) => props.color};
+  flex:1;
+ overflow: hidden;
+ 
+
+
+
 
   a {
+   
+  ${ExtraExtraLarge({paddingTop:"3em"})} ;
+  display: flex;
+  flex-direction: column;
     font-style: normal;
     font-weight: 800;
     font-size: 24px;
-    line-height: 28px;
+ 
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: -0.045em;
+   
+   
+
+
   }
+
 `;
+
+export const Text = styled.p`
+  z-index:2;
+     line-height: 2.5rem; 
+`;
+
+export const ImgContainer = styled.div`
+    display:none;
+    margin:-2em 0;
+  ${Medium({display:"block",})} ;
+  /* ${ExtraExtraLarge({margin:"-3em 0"})} ; */
+
+
+
+`;
+export const Image = styled.img`
+  height:100%;
+  width:100%;
+  object-fit:cover;
+
+
+
+`;
+
+
+
+
 export const Nav = styled.nav`
   position: absolute;
   inset: 0;
@@ -32,17 +78,20 @@ export const Nav = styled.nav`
 `;
 
 export const Container = styled.div`
-  position: absolute;
-  right: 4em;
-  top: 1.1em;
-  border:1px solid red;
+   a{padding:0;}
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
+  ${Medium({gridColumn:"span 2"})} ;
+ 
 
+
+  a{
+    padding:0;
+  }
   svg {
     margin-top: 0.4em;
     font-size: 2.5em;
@@ -55,8 +104,13 @@ export const BrandTitle = styled.div`
   margin-top: 2em;
 `;
 export const StyledMenu = styled.nav`
-  display: flex;
-  flex-direction: column;
+
+
+  ${Medium({display:"grid",gridTemplateColumns:"repeat(3,1fr)"})} ;
+  ${ExtraExtraLarge({gridTemplateRows:"1fr 1fr 10%"})} ;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:5px;
   background: ${({ theme }) => theme.primaryLight};
   height: 92vh;
   width: 100%;
@@ -77,7 +131,6 @@ export const StyledMenu = styled.nav`
   a {
     font-size: 2rem;
     text-transform: uppercase;
-    padding: 2rem 0;
     font-weight: bold;
     /* color: ${({ theme }) => theme.primaryDark}; */
     text-decoration: none;
