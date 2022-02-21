@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Medium,Large,ExtraExtraLarge } from "../../responsive";
+
 
 export const StyledProductSelect = styled.div`
   height: 100%;
@@ -11,18 +13,17 @@ export const Select = styled.select`
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
   width: 80%;
+  ${Medium({width:"50%"})} ;
+  ${ExtraExtraLarge({width:"40%"})} ;
   padding: 1rem;
   margin: 0 auto;
   /* transition:all 0.5s ease-in-out; */
   font-size: 1.5em;
-
   background-color: ${({ theme }) => theme.primaryDark};
   color: #fff;
-
-  /* border-bottom: 1px solid white;  */
-
   border-radius: 10px;
   border: none;
   border-bottom: 1px solid white;
@@ -31,7 +32,7 @@ export const Select = styled.select`
 
   &:focus {
     color: ${(props) => props.color};
-    /* border:1px solid white; */
+  
   }
   &:hover {
     cursor: pointer;

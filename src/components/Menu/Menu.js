@@ -49,7 +49,6 @@ const [productName, setProductName] = useState("")
       <StyledButton   key={product.id} bgColor={product.color} color={product.bgColor}>
       <Link   to={`/Product/${product.name}`} onClick={()=> {handleClick()}} >
         <Text>
-
         {product.name}
         </Text>
       
@@ -57,6 +56,8 @@ const [productName, setProductName] = useState("")
       <Image src={product.img}/>
       
       </ImgContainer>
+
+      <Text>BUY NOW</Text>
       </Link>
     </StyledButton>)
 

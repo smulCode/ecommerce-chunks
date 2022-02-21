@@ -1,10 +1,9 @@
 // Menu.styled.js
 import styled from "styled-components";
-import { Medium,Large,ExtraExtraLarge } from "../../responsive";
-
+import { Medium, Large, ExtraExtraLarge } from "../../responsive";
 
 export const StyledButton = styled.button`
-    position:relative;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,59 +15,60 @@ export const StyledButton = styled.button`
   border: none;
   margin: 5px auto;
   color: ${(props) => props.color};
-  flex:1;
- overflow: hidden;
- 
+  flex: 1;
+  overflow: hidden;
 
-
-
+  p:nth-of-type(2) {
+    display: none;
+    ${Medium({ display: "block", color: "transparent" })};
+    ${ExtraExtraLarge({ marginTop: "-5rem" })};
+  }
 
   a {
-   
-  ${ExtraExtraLarge({paddingTop:"3em"})} ;
-  display: flex;
-  flex-direction: column;
+    ${ExtraExtraLarge({ paddingTop: "2rem" })};
+    display: flex;
+    flex-direction: column;
     font-style: normal;
     font-weight: 800;
     font-size: 24px;
- 
+
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: -0.045em;
-   
-   
 
-
+    &:hover {
+      p {
+        color: ${(props) => props.color};
+      }
+    }
   }
-
 `;
 
 export const Text = styled.p`
-  z-index:2;
-     line-height: 2.5rem; 
+  z-index: 2;
+  line-height: 2.5rem;
+  transition: all 300ms ease-in-out;
 `;
 
 export const ImgContainer = styled.div`
-    display:none;
-    margin:-2em 0;
-  ${Medium({display:"block",})} ;
-  /* ${ExtraExtraLarge({margin:"-3em 0"})} ; */
-
-
-
+  display: none;
+  margin: -2em 0;
+  ${Medium({ display: "block" })};
+  /* ${ExtraExtraLarge({ margin: "-3em 0" })} ; */
 `;
 export const Image = styled.img`
-  height:100%;
-  width:100%;
-  object-fit:cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  ${ExtraExtraLarge({ height: "80%" })};
 
-
-
+  &:hover {
+    transform: scale(1.1);
+    filter: none !important;
+  }
 `;
-
-
-
 
 export const Nav = styled.nav`
   position: absolute;
@@ -78,19 +78,19 @@ export const Nav = styled.nav`
 `;
 
 export const Container = styled.div`
-   a{padding:0;}
+  a {
+    padding: 0;
+  }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
-  ${Medium({gridColumn:"span 2"})} ;
- 
+  ${Medium({ gridColumn: "span 2" })};
 
-
-  a{
-    padding:0;
+  a {
+    padding: 0;
   }
   svg {
     margin-top: 0.4em;
@@ -104,13 +104,11 @@ export const BrandTitle = styled.div`
   margin-top: 2em;
 `;
 export const StyledMenu = styled.nav`
-
-
-  ${Medium({display:"grid",gridTemplateColumns:"repeat(3,1fr)"})} ;
-  ${ExtraExtraLarge({gridTemplateRows:"1fr 1fr 10%"})} ;
-  display:grid;
-  grid-template-columns:1fr;
-  gap:5px;
+  ${Medium({ display: "grid", gridTemplateColumns: "repeat(3,1fr)" })};
+  ${ExtraExtraLarge({ gridTemplateRows: "1fr 1fr 10%" })};
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
   background: ${({ theme }) => theme.primaryLight};
   height: 92vh;
   width: 100%;
@@ -124,8 +122,10 @@ export const StyledMenu = styled.nav`
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   z-index: 3;
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100%;
+  p:hover {
+    /* color: ${({ theme }) => theme.primaryAccent}; */
+
+    filter: contrast(4);
   }
 
   a {
@@ -134,15 +134,6 @@ export const StyledMenu = styled.nav`
     font-weight: bold;
     /* color: ${({ theme }) => theme.primaryDark}; */
     text-decoration: none;
-    transition: color 0.3s linear;
-
-    @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
-    &:hover {
-      color: ${({ theme }) => theme.primaryHover};
-    }
+    transition: all 0.3s ease-in-out;
   }
 `;

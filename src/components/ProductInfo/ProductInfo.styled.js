@@ -54,6 +54,7 @@ font-size: 2em;
 
 export const Container = styled.div`
   padding:1rem 0;
+  width:100%;
 
   
  
@@ -64,10 +65,12 @@ export const Circle = styled.div`
     background-color: ${(props) => props.color};
     border-radius: 50%;
     height:fit-content;
-    width:100%;
+    width:80%;
     border: none;
     margin:0 auto;
     padding:2rem;
+    ${Medium({ width:"60%" })};
+    ${Large({ width:"80%" })};
 
  
 
@@ -78,10 +81,12 @@ export const Circle = styled.div`
   `;
 
   export const Text = styled.p`
-    padding:1em 2em;
+    padding:1em ;
     font-weight: 400;
     font-size:1.1rem;
-
+    width:70%;
+margin:0 auto;
+${Large({ width:"100%" })};
 
   `;
 
@@ -96,5 +101,5 @@ export const Circle = styled.div`
 
   export const GridContainer = styled.div`
 
-   ${Medium({ display:"grid",gridTemplateColumns:"repeat(4,1fr)",gridGap:"1rem" ,padding:"2rem", width:"100%", })};
+   ${Large({ display:"grid",gridTemplateColumns:"repeat(4,1fr)",gridGap:"1rem" ,padding:"2rem", width:"100%", })};
   `;

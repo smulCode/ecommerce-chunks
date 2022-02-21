@@ -72,6 +72,9 @@ export const Right = styled.div`
     position: absolute;
     right:10%;
     top:10%;
+    &:hover{
+      cursor: pointer;
+    }
   }
 `;
 
