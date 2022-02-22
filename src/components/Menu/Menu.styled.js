@@ -104,7 +104,12 @@ export const BrandTitle = styled.div`
   margin-top: 2em;
 `;
 export const StyledMenu = styled.nav`
-  ${Medium({ display: "grid", gridTemplateColumns: "repeat(3,1fr)" })};
+  ${Medium({
+    display: "grid",
+    gridTemplateColumns: "repeat(3,1fr)",
+    height: "98vh",
+    gridTemplateRows: "1fr 1fr 10%"
+  })};
   ${ExtraExtraLarge({ gridTemplateRows: "1fr 1fr 10%" })};
   display: grid;
   grid-template-columns: 1fr;
@@ -121,6 +126,7 @@ export const StyledMenu = styled.nav`
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   z-index: 3;
+  ${Medium({ paddingTop: "8%" })};
 
   p:hover {
     /* color: ${({ theme }) => theme.primaryAccent}; */

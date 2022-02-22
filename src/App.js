@@ -8,6 +8,7 @@ import { theme } from "./components/styles/theme";
 import { Routes, Route, useParams } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
+
 const App = () => {
   const user = true;
   return (

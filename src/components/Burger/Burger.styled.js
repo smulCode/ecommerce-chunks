@@ -1,9 +1,10 @@
 // Burger.styled.js
 import styled from 'styled-components';
+import { Medium,Large,ExtraExtraLarge } from "../../responsive";
 
 
 
-export const StyledBurger = styled.button`
+export const StyledBurger = styled.div`
   position: absolute;
   top:1em;
   left: 1rem;
@@ -18,6 +19,8 @@ export const StyledBurger = styled.button`
   padding: 0;
   z-index: 5;
   position: fixed;
+
+
   &:focus {
     outline: none;
   }

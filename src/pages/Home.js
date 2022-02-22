@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 
 
 
+
 const Home = () => {
 
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       {/* <Announcement /> */}
       <Hero/>
       <FlavorSection/>
+
       <ExtraFlavor/>
       
       

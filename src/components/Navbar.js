@@ -73,7 +73,7 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
     <Container bgColor={bgColor}>
       <Wrapper>
         <Left ref={node}>
-          <Burger color={color} open={open} setOpen={setOpen} />
+          <Burger color={color} bgColor={bgColor} open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
         </Left>
         <Center>

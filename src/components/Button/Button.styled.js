@@ -9,7 +9,7 @@ const StyledButton = styled.button`
   background: ${(props) => props.bgColor};
   width: ${(props) => props.width};
   height: fit-content;
-  padding:1rem 0;
+  padding:${(props) => props.padding};
   margin: 0.5rem auto;
   font-style: normal;
   font-weight: 800;
