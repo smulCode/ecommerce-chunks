@@ -22,8 +22,7 @@ const Burger = ({ open, setOpen, color ,bgColor }) => {
       window.removeEventListener("resize", setDimension);
     };
   }, [screenSize]);
-console.log(bgColor)
-console.log(color + " color")
+
 
   return (
     <StyledBurger color={color}  open={open} onClick={() => setOpen(!open)}>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 
-import { useState, useRef } from "react";
+import { useState, useRef,useEffect } from "react";
 import { useOnClickOutside } from "../hooks";
 import Burger from "../components/Burger";
 import Menu from "../components/Menu";
@@ -9,12 +9,25 @@ import Cart from "../components/Cart";
 import CartMenuBurger from "../components/CartMenuBurger";
 import { Link } from "react-router-dom";
 
+
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
+
 const Container = styled.div`
   height: 60px;
   position:fixed;
   width: 100%;
   background-color: ${(props) => props.bgColor};
+
   z-index: 100;
+
+  .nav-active {
+  background-color:blue;
+}
+
+
 `;
 
 const Wrapper = styled.div`
@@ -63,14 +76,44 @@ const MenuItem = styled.div`
     open ? theme.primaryDark : theme.primaryLight}; */
 `;
 
+
+
 const Navbar = ({ bgColor, color, LogoColor }) => {
   const [open, setOpen] = useState(false);
   const [openCart, setOpenCart] = useState(false);
   const node = useRef();
 
+
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+  
+    const el = containerRef.current;
+
+    const showAnim = gsap.from(el, { 
+      yPercent: -100,
+      paused: true,
+      duration: 0.5,
+    
+    }).progress(1);
+    
+    ScrollTrigger.create({
+      start: "top top",
+      end: 99999,
+      markers:true,
+      
+     
+      onUpdate: (self) => {
+        self.direction === -1 ? showAnim.play() : showAnim.reverse()
+      }
+    });
+  }, []);
+
+
+
   useOnClickOutside(node, () => setOpen(false));
   return (
-    <Container bgColor={bgColor}>
+    <Container ref={ containerRef} bgColor={bgColor}>
       <Wrapper>
         <Left ref={node}>
           <Burger color={color} bgColor={bgColor} open={open} setOpen={setOpen} />

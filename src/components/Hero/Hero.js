@@ -10,12 +10,27 @@ import chocoBar from "../../assets/IMG/choco-part-bar.png";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Button from "../Button";
 import { Link } from "react-router-dom";
+import {useRef, useEffect} from "react";
+import gsap from "gsap";
+
+
 
 
 const Hero = () => {
+
+  const ContentRef = useRef(null);
+
+  useEffect(() => {
+   const el = ContentRef.current;
+   gsap.fromTo(el, {x:"-100%",y:"100vh"},{x:0,y:0,duration:2, ease: "easeIn"})
+
+
+  }, [])
+  
+
   return (
     <Container>
-      <Wrapper>
+      <Wrapper  ref={ContentRef}>
         <Headline>CHUNKS!</Headline>
         <Content />
       </Wrapper>

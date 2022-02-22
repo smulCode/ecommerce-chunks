@@ -10,6 +10,9 @@ import Footer from "../components/Footer";
 
 const Home = () => {
 
+
+
+
   return (
     <div>
       <Navbar  bgColor="transparent" LogoColor="transparent" color="#fff"/>
