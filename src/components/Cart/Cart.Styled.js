@@ -18,7 +18,7 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   background: ${({ theme }) => theme.secondaryBg};
-  min-height: 100%;
+  min-height: 100vh;
   text-align: left;
   padding-top: 5.2em;
   position: absolute;
