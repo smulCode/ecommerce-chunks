@@ -119,11 +119,11 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
     });
   }, []);
 
-
+console.log(containerRef)
 
   useOnClickOutside(node, () => setOpen(false));
   return (
-    <Container ref={containerRef} color={color} bgColor={bgColor}>
+    <Container ref={containerRef} color={color} >
       <Wrapper>
         <Left ref={node}>
           <Burger color={color} bgColor={bgColor} open={open} setOpen={setOpen} />

@@ -1,18 +1,17 @@
 import styled from "styled-components";
-import { mobile } from "../responsive";
-import Navbar from "../components/Navbar";
 import Button from "../components/Button";
+import Navbar from "../components/Navbar";
 import SignUp from "../components/SignUp";
 import Footer from "../components/Footer";
 import { Medium,Large,ExtraExtraLarge } from "../responsive";
 
 
 const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
 
   background-color: ${({ theme }) => theme.secondaryBg};
-  background-size: cover;
+
 `;
 
 const Wrapper = styled.div`
@@ -59,6 +58,7 @@ const Login = () => {
   return (
     <Container>
       <Navbar color="black" LogoColor="black" />
+     
       <Wrapper>
         <Title>LOG IN</Title>
         <Message>

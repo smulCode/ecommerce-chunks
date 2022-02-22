@@ -22,7 +22,7 @@ const Hero = () => {
 
   useEffect(() => {
    const el = ContentRef.current;
-   gsap.fromTo(el, {x:"-100%",y:"100vh"},{x:0,y:0,duration:2, ease: "easeIn"})
+   gsap.fromTo(el, {x:"-100%",y:"100vh"},{x:0,y:0,duration:2, ease: "expo.inOut"})
 
 
   }, [])
