@@ -31,7 +31,7 @@ const ProductPage = () => {
 
   return (
     <Container>
-       <Navbar  LogoColor={product.bgColor} color={product.bgColor}/>
+       <Navbar bgColor={product.color}  LogoColor={product.bgColor} color={product.bgColor}/>
       <ProductSelect  color={product.bgColor} />
       <ProductShowCase color={product.bgColor}/>
       <FixedShoppingCart color={product.bgColor} />

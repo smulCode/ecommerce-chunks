@@ -16,16 +16,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 
 const Container = styled.div`
-  height: 60px;
+  height: 70px;
   position:fixed;
   width: 100%;
-  background-color: ${(props) => props.bgColor};
-
+  /* background-color:${(props) => props.color}; */
+  /* background-color:red; */
+ /* background:red; */
   z-index: 100;
 
-  .nav-active {
-  background-color:blue;
-}
 
 
 `;
@@ -84,6 +82,10 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
   const node = useRef();
 
 
+
+
+
+
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -93,17 +95,25 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
     const showAnim = gsap.from(el, { 
       yPercent: -100,
       paused: true,
-      duration: 0.5,
+      duration: 0.2,
+      backgroundColor:"transparent",
     
     }).progress(1);
     
     ScrollTrigger.create({
       start: "top top",
-      end: 99999,
-      markers:true,
+      end: "bottom bottom",
+      markers: {startColor: "green", endColor: "red", fontSize: "1rem"},
+   
+      onLeaveBack: () => {
+
+
+        gsap.to(el, {backgroundColor:"transparent"})
+      },
       
      
       onUpdate: (self) => {
+        gsap.to(el, {backgroundColor:"#EB3581"})
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
       }
     });
@@ -113,7 +123,7 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
 
   useOnClickOutside(node, () => setOpen(false));
   return (
-    <Container ref={ containerRef} bgColor={bgColor}>
+    <Container ref={containerRef} color={color} bgColor={bgColor}>
       <Wrapper>
         <Left ref={node}>
           <Burger color={color} bgColor={bgColor} open={open} setOpen={setOpen} />

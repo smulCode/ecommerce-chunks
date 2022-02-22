@@ -16,6 +16,7 @@ const Home = () => {
   return (
     <div>
       <Navbar  bgColor="transparent" LogoColor="transparent" color="#fff"/>
+  
       {/* <Announcement /> */}
       <Hero/>
       <FlavorSection/>
