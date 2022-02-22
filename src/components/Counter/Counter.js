@@ -10,7 +10,7 @@ import {useEffect} from "react"
 const Counter = ({ border, product }) => {
   const shoppingCartReducer = useSelector((state) => state.shoppingCartReducer);
 
-console.log(  shoppingCartReducer.total  )
+
   const addItem = () => {
   
     dispatch(AddQuantity(product.id));

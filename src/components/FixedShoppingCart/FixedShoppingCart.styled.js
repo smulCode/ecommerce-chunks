@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Medium,Large,ExtraExtraLarge } from "../../responsive";
+
 
 export const StyledFixedShoppingCart = styled.div`
   position: fixed;
@@ -11,12 +13,16 @@ export const StyledFixedShoppingCart = styled.div`
   color: ${({ theme }) => theme.primaryLight};
   padding: 2%;
   border: 1.5px solid ${({ theme }) => theme.primaryLight};
+ 
 `;
 
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${Medium({ width:"60%", margin:"0 auto"})};
+  ${Large({ width:"50%", margin:"0 auto"})};
+
 `;
 
 export const Price = styled.p`

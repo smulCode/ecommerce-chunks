@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import wrapperBg from "../../assets/IMG/wrapper-choco.jpg";
+import { Medium,Large,ExtraExtraLarge } from "../../responsive";
+
 
 
 export const Container = styled.div`
@@ -21,6 +23,9 @@ export const Container = styled.div`
     font-size:3em;
     color: ${({ theme }) => theme.primaryAccent};
   }
+
+  ${Medium({  paddingTop:"2%"})};
+
 `;
 
 export const Wrapper = styled.div`
@@ -46,6 +51,8 @@ export const Headline = styled.h1`
   -webkit-text-fill-color: ${({ theme }) => theme.primaryAccent};
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 1;
+  ${Medium({  fontSize: "20vw",marginLeft: "25%"})};
+  
 `;
 
 export const Content = styled.div`
@@ -56,6 +63,8 @@ export const Content = styled.div`
   width: 100%;
   background-size: cover;
   clip-path: polygon(11% 0, 92% 0, 92% 9%, 0 100%, 0 14%);
+  ${Medium({  height:"100vh" ,clipPath: "polygon(27% 0, 84% 0, 84% 6%, 33% 100%, 0 100%, 0% 50%)"})};
+
 `;
 
 export const CenterContent = styled.div`
@@ -99,6 +108,8 @@ export const BottomContent = styled.div`
   flex-direction: column;
   margin: 0 auto;
 margin-top:3rem;
+${Medium({ position:"absolute",right:"2%",bottom:"15%" })};
+
 
 `;
 export const Title = styled.div`
@@ -112,9 +123,13 @@ export const Title = styled.div`
   -webkit-background-clip: text;
   -webkit-text-fill-color: ${({ theme }) => theme.primaryLight};
   width: 100%;
+${Medium({ fontSize:"5vw" })};
+
 `;
 
-export const FirstLine = styled.div``;
+export const FirstLine = styled.div`
+
+`;
 
 export const SecondLine = styled.div``;
 export const SubTitle = styled.div`
@@ -123,4 +138,10 @@ export const SubTitle = styled.div`
   font-size: 1.3em;
   line-height: 16px;
   letter-spacing: -0.045em;
+`;
+
+
+export const ContainerBtn = styled.div`
+${Medium({ position:"absolute",right:"10%",bottom:"4%" })};
+  
 `;

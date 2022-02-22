@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import { Medium,Large,ExtraExtraLarge } from "../../responsive";
 
 export const StyledSignUp = styled.div`
   display:flex;
@@ -7,6 +8,12 @@ export const StyledSignUp = styled.div`
   background-color:${({ theme}) => theme.secondaryBg};
   padding:1rem;
   height:40vh;
+
+`;
+
+export const Container = styled.div`
+    ${Medium({ width:"60%", margin:"0 auto"})};
+  ${Large({ width:"50%", margin:"0 auto"})};
 `;
 
 export const Text = styled.p`

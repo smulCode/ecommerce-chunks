@@ -35,21 +35,21 @@ const BagCheck = cartItems.addedItems.find((item) => product.id === item.id)
   return (
     <StyledFixedShoppingCart>
       <Container>
-        <Checkbox type="checkbox" defaultChecked color={color}/>
+        <Checkbox type="checkbox" defaultChecked disabled color={color}/>
         <Price>
-          €{product.price}
+          €{Number(product.price).toFixed(2)}
           <Span>/8 PACK</Span>
         </Price>
         <Text>One time Purchase</Text>
       </Container>
       <Container>
-        <Checkbox type="checkbox"  color={color}
+        {/* <Checkbox type="checkbox"   color={color}
         />
         <Price>
           €{product.priceSubs}
           <Span>/8 PACK</Span>
         </Price>
-        <Text>Subscribe & save 15%</Text>
+        <Text>Subscribe & save 15%</Text> */}
       </Container>
 
       <Container>

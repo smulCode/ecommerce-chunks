@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import Button from "../components/Button";
 import SignUp from "../components/SignUp";
 import Footer from "../components/Footer";
+import { Medium,Large,ExtraExtraLarge } from "../responsive";
+
 
 const Container = styled.div`
   width: 100vw;
@@ -17,6 +19,8 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 20px;
   padding-top:60px;
+  ${Medium({ width:"60%", margin:"0 auto"})};
+  ${Large({ width:"50%", margin:"0 auto"})};
 `;
 
 const Title = styled.h1`

@@ -3,7 +3,8 @@ Title,
 FirstLine,
 SecondLine,
 SubTitle,
-ImgContainer
+ImgContainer,
+ContainerBtn
 } from "./Hero.styled"
 import chocoBar from "../../assets/IMG/choco-part-bar.png";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -37,11 +38,14 @@ const Hero = () => {
         </Title>
         <SubTitle>Plant-based candy bars zero sugar</SubTitle>
       </BottomContent>
-     
+     <ContainerBtn> 
+
+
       <Link to="Product/VARIETY%20PACK">
       <Button text={"BUY NOW"} shadowColor="#fff" color="#191D1E" bgColor="#EB3581" width="176px">
       </Button>
       </Link>
+     </ContainerBtn>
       <KeyboardArrowDownIcon/>
     </Container>
   );
