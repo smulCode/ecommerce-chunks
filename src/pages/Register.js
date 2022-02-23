@@ -1,78 +1,133 @@
 import styled from "styled-components";
-// import {mobile} from "../responsive"
+import Button from "../components/Button";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { Medium,Large,ExtraExtraLarge } from "../responsive";
+
+
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { auth,
+  registerWithEmailAndPassword,
+  signInWithGoogle, } from "../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+
+
+
 
 const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
-      center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* width: 100vw;
+  height: 100vh; */
+
+
+  background-color: ${({ theme }) => theme.secondaryBg};
+
 `;
 
 const Wrapper = styled.div`
-  width: 40%;
+  
+  width: 100%;
   padding: 20px;
-  background-color: white;
+  ${Medium({ width:"60%", margin:"0 auto"})};
+  ${Large({ width:"100%", margin:"0 auto"})};
 
 `;
 
 const Title = styled.h1`
-  font-size: 24px;
-  font-weight: 300;
+padding-top:20%;
+${Large({ paddingTop:"0"})};
+
+  grid-column: span 2;
+  font-size: 10vw;
+  text-align: center;
+  font-weight:800;
+  line-height:1rem;
+  
 `;
 
-const Form = styled.form`
+const Form = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+
+  a{
+    margin: 2em 0px;
+
+text-decoration: underline;
+cursor: pointer;
+  }
 `;
 
 const Input = styled.input`
   flex: 1;
-  min-width: 40%;
-  margin: 20px 10px 0px 0px;
-  padding: 10px;
-`;
-
-const Agreement = styled.span`
-  font-size: 12px;
-  margin: 20px 0px;
-`;
-
-const Button = styled.button`
-  width: 40%;
+  min-width: 20%;
+  margin: 5px 0;
+  padding: 1em;
+  border-radius: 8px;
   border: none;
-  padding: 15px 20px;
-  background-color: teal;
-  color: white;
-  cursor: pointer;
 `;
+
+
+
+
+
 const Register = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
+  const register = () => {
+    if (!name) alert("Please enter name");
+    registerWithEmailAndPassword(name, email, password);
+  };
   return (
     <Container>
-      <Wrapper>
-        <Title>CREATE A ACCOUNT</Title>
-        <Form>
-          <Input placeholder="name" />
-          <Input placeholder="last name" />
-          <Input placeholder="username" />
-          <Input placeholder="email" />
-          <Input placeholder="password" />
-          <Input placeholder="confirm password" />
-          <Agreement>
-            By creating an account, I consent to the processing of my personal
-            data in accordance with the <b>PRIVACY POLICY</b>
-          </Agreement>
-          <Button>CREATE</Button>
-        </Form>
-      </Wrapper>
-    </Container>
+    <Navbar color="black" LogoColor="black" />
+
+      <Title>REGISTER</Title>
+    <Wrapper>
+      <Form >
+        <Input 
+        placeholder="FULL NAME"
+        value={name}
+      onChange={(e) => setName(e.target.value)}
+        />
+        <Input 
+        placeholder="Email"
+        value={email}
+      onChange={(e) => setEmail(e.target.value)}
+        />
+        <Input 
+        placeholder="Password"
+        value={password}
+      onChange={(e) => setPassword(e.target.value)}
+        
+        />
+
+        <Button
+          text="SIGN UP"
+          shadowColor="#191D1E"
+          color="#fff"
+          bgColor="Black"
+          width="100%"
+          onClick={register}
+        />
+        <Button
+          text="GOOGLE"
+          shadowColor="#191D1E"
+          color="#fff"
+          bgColor="Black"
+          width="100%"
+          onClick={signInWithGoogle}
+        />
+        Already have an account?
+        <Link to="/Login">LOGIN</Link>
+      </Form>
+    </Wrapper>
+
+
+    <Footer/>
+  </Container>
   );
 };
 

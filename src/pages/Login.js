@@ -4,7 +4,15 @@ import Navbar from "../components/Navbar";
 import SignUp from "../components/SignUp";
 import Footer from "../components/Footer";
 import { Medium,Large,ExtraExtraLarge } from "../responsive";
-import { useState} from "react"
+
+
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+
+
+
 
 
 const Container = styled.div`
@@ -61,9 +69,16 @@ ${Large({ paddingTop:"0"})};
   
 `;
 
-const Form = styled.form`
+const Form = styled.div`
   display: flex;
   flex-direction: column;
+
+  a{
+    margin: 2em 0px;
+
+text-decoration: underline;
+cursor: pointer;
+  }
 `;
 
 const Input = styled.input`
@@ -75,12 +90,7 @@ const Input = styled.input`
   border: none;
 `;
 
-const Link = styled.a`
-  margin: 2em 0px;
 
-  text-decoration: underline;
-  cursor: pointer;
-`;
 
 const Message = styled.p`
   font-size: 1em;
@@ -92,17 +102,17 @@ const Message = styled.p`
 
 
 const Login = () => {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-
-  const handleSubmit = (e)=> {
-    e.preventDefault();
-    // console.log('You clicked submit.');
-
-    setEmail("");
-    setPassword("");
-  }
-
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (loading) {
+      // maybe trigger a loading screen
+      return;
+    }
+    if (user) navigate("/dashboard");
+  }, [user, loading]);
 
 
   return (
@@ -115,7 +125,7 @@ const Login = () => {
           NOTE: Account login and management is only available for customers
           with active subscription orders
         </Message>
-        <Form onSubmit={handleSubmit}>
+        <Form >
           <Input 
           placeholder="Email"
           value={email}
@@ -133,8 +143,19 @@ const Login = () => {
             color="#fff"
             bgColor="Black"
             width="100%"
+            onClick={() =>logInWithEmailAndPassword(email, password)}
           />
-          <Link>FORGOT PASSWORD?</Link>
+          
+          <Button
+            text="GOOGLE"
+            shadowColor="#191D1E"
+            color="#fff"
+            bgColor="Black"
+            width="100%"
+            onClick={signInWithGoogle}
+          />
+          
+          <Link to="/reset">FORGOT PASSWORD?</Link>
         </Form>
       </Wrapper>
       <SignUp />

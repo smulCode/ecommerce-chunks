@@ -20,6 +20,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="Product/:id" element={<Product />} />
             <Route path="Login" element={<Login />} />
+            <Route path="Register" element={<Register />} />
           </Routes>
         </ScrollToTop>
       </>
