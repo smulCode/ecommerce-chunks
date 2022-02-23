@@ -2,8 +2,16 @@ import VARIETYPACK from "./assets/IMG/Chocolate-Bar-Packaging-Mockup-removebg-pr
 import mockup from "./assets/IMG/Snack-Bar-Mockup-removebg-preview.png";
 import BarsFront from "./assets/IMG/4Bars-front.png";
 import BarsSide from "./assets/IMG/VARIETY_SPLIT_LG_1000x.png";
-import AlmontFront from "./assets/IMG/ALMOND-FRONT.png"
-import AlmontOverhead from "./assets/IMG/ALMOND-OVERHEAD.png"
+import ALMONDFront from "./assets/IMG/ALMOND-FRONT.png";
+import ALMONDOverhead from "./assets/IMG/ALMOND-OVERHEAD.png";
+import BANANAFront from "./assets/IMG/BANANA-FRONT.png"
+import BANANAOverhead from "./assets/IMG/BANANA-OVERHEAD.png"
+import DOUBLEDARKFront from "./assets/IMG/DOUBLEDARK-FRONT.png"
+import DOUBLEDARKOverhead from "./assets/IMG/DOUBLEDARK-OVERHEAD.png"
+import HAZELNUTFront from "./assets/IMG/HAZELNUT-FRONT.png"
+import HAZELNUTOverhead from "./assets/IMG/HAZELNUT-OVERHEAD.png"
+import SALTEDFront from "./assets/IMG/SALTED-FRONT.png"
+import SALTEDOverhead from "./assets/IMG/SALTED-OVERHEAD.png"
 
 
 
@@ -28,6 +36,8 @@ export const Products = [
     id: 2,
     name: "SALTED PEANUT",
     img: mockup,
+    imgFront: SALTEDFront,
+    imgOverhead:SALTEDOverhead,
     price: 18.50,
     priceSubs: (15.50).toFixed(2),
     category: "Multipack",
@@ -41,6 +51,8 @@ export const Products = [
     id: 3,
     name: "HAZELNUT CAFE",
     img: mockup,
+    imgFront: HAZELNUTFront,
+    imgOverhead:HAZELNUTOverhead,
     price: 18.50,
     priceSubs: (15.50).toFixed(2),
     category: "Multipack",
@@ -54,6 +66,8 @@ export const Products = [
     id: 4,
     name: "ALMOND HORCHATA",
     img: mockup,
+    imgFront: ALMONDFront,
+    imgOverhead:ALMONDOverhead,
     price: 18.50,
     priceSubs: (15.50).toFixed(2),
     category: "Multipack",
@@ -67,6 +81,8 @@ export const Products = [
     id: 5,
     name: "DOUBLE DARK MINT",
     img: mockup,
+    imgFront: DOUBLEDARKFront,
+    imgOverhead:DOUBLEDARKOverhead,
     price: 18.50,
     priceSubs: (15.50).toFixed(2),
     category: "Multipack",
@@ -80,6 +96,8 @@ export const Products = [
     id: 6,
     name: "BANANA PECAN",
     img: mockup,
+    imgFront: BANANAFront,
+    imgOverhead:BANANAOverhead,
     price: 18.50,
     priceSubs: (15.50).toFixed(2),
     category: "Multipack",
