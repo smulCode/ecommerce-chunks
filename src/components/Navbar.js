@@ -119,7 +119,7 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
     });
   }, []);
 
-console.log(containerRef)
+
 
   useOnClickOutside(node, () => setOpen(false));
   return (

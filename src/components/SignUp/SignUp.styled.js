@@ -12,8 +12,9 @@ export const StyledSignUp = styled.div`
 `;
 
 export const Container = styled.div`
-    ${Medium({ width:"60%", margin:"0 auto"})};
-  ${Large({ width:"50%", margin:"0 auto"})};
+ ${Medium({ width:"60%", margin:"0 auto"})}; 
+ ${Large({ width:"100%", margin:"0 auto"})};
+
 `;
 
 export const Text = styled.p`

@@ -12,6 +12,7 @@ import HAZELNUTFront from "./assets/IMG/HAZELNUT-FRONT.png"
 import HAZELNUTOverhead from "./assets/IMG/HAZELNUT-OVERHEAD.png"
 import SALTEDFront from "./assets/IMG/SALTED-FRONT.png"
 import SALTEDOverhead from "./assets/IMG/SALTED-OVERHEAD.png"
+import SALTEDSide from "./assets/IMG/SALTED-SIDE.png"
 
 
 

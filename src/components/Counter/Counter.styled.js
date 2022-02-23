@@ -19,8 +19,20 @@ export const StyledCounter = styled.div`
     background-color:transparent;
     border:none;
 
+    svg{
+      color:#999;
+
+      &:hover{
+      cursor: pointer;
+  color:${({ theme})=> theme.primaryDark};
+
+    }
+    }
+
     &:hover{
       cursor: pointer;
+  color:${({ theme})=> theme.primaryDark};
+
     }
  
   }

@@ -38,22 +38,18 @@ export const RadioButton = styled.button`
 
 export const ImgSlider = styled.div`
   width: 100vw;
-  height: 50vh;
+
 `;
 
 export const ImgContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.5em;
 
-  /* margin-top:-4em; */
-
-  height: 100%;
-  /* width: 50vw; */
-  ${Medium({ width:"50vw" })}
-  ${ExtraExtraLarge({padding:"1em"})}
-
- 
+  width: 100%;
+  padding: 1rem;
+  ${Medium({ width: "50vw" })}
 
   overflow: hidden;
 
@@ -63,20 +59,21 @@ export const ImgContainer = styled.div`
 export const Image = styled.img`
   height: 100%;
   width: 100%;
-  object-fit: contain;
-  /* margin-left:5%; */
-  ${ExtraExtraLarge({ marginLeft:"6%"})}
-
+  object-fit: cover;
+  margin-left:3vw;
+  ${Medium({ marginLeft: "1vw" })}
+  ${ExtraExtraLarge({ marginLeft: "4vw" })}
   transition: all 1.5s ease;
-  transform: translateX(${(props) => props.slideIndex * -100}%);
+  transform: translateX(${(props) => props.slideIndex * -100}vw);
 
-
+  @media only screen and (min-width: 768px) {
+    transform: translateX(${(props) => props.slideIndex * -50}vw);
+  }
 `;
 
 export const ReviewScore = styled.div`
   margin-top: -4em;
   display: flex;
-  /* padding-top:1em; */
 
   svg {
     color: ${({ theme }) => theme.checkoutBg};

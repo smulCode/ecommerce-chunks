@@ -21,6 +21,27 @@ const StyledButton = styled.button`
   box-shadow: -2px 3px 0px ${(props) => props.shadowColor};
   border-radius: 8px;
   cursor: pointer;
+  transition: all 200ms ease-in-out;
+
+  &:hover{
+    transform:translate(4px,-4px);
+    box-shadow: 
+
+    -3px 4px 0px ${(props) => props.shadowColor},
+    -4px 5px 0px ${(props) => props.shadowColor},
+    -5px 6px 0px ${(props) => props.shadowColor},
+    -6px 7px 0px ${(props) => props.shadowColor},
+    -7px 8px 0px ${(props) => props.shadowColor}
+
+
+      }
+
+      &:active{
+        transform:translateY(0) translateX(0);
+        box-shadow: -2px 3px 0px ${(props) => props.shadowColor};
+
+
+      }
 
 `;
 

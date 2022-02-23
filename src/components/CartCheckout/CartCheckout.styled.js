@@ -39,6 +39,29 @@ export const CheckoutBtn = styled.button`
   border-radius: 8px;
   background-color: ${({ theme }) => theme.checkoutBtn};
   color: ${({ theme }) => theme.checkoutBg};
+
+  transition: all 200ms ease-in-out;
+  &:hover{
+    cursor: pointer;
+    transform:translate(4px,-4px);
+    box-shadow: 
+
+    -3px 4px 0px #7c6918,
+    -4px 5px 0px #7c6918,
+    -5px 6px 0px #7c6918,
+    -6px 7px 0px #7c6918,
+    -7px 8px 0px #7c6918
+
+
+      }
+
+      &:active{
+        transform:translateY(0) translateX(0);
+        box-shadow: -2px 3px 0px #7c6918;
+
+
+      }
+
 `;
 
 
