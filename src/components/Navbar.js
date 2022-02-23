@@ -103,7 +103,7 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
     ScrollTrigger.create({
       start: "top top",
       end: "bottom bottom",
-      markers: {startColor: "green", endColor: "red", fontSize: "1rem"},
+      // markers: {startColor: "green", endColor: "red", fontSize: "1rem"},
    
       onLeaveBack: () => {
 
