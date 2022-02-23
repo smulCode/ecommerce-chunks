@@ -1,6 +1,6 @@
 // Menu.styled.js
 import styled from "styled-components";
-import {Medium,ExtraExtraLarge} from "../../responsive"
+import {Medium,Large,ExtraExtraLarge} from "../../responsive"
 
 
 export const CartTitle = styled.h2`
@@ -32,7 +32,7 @@ export const StyledMenu = styled.nav`
   z-index: 9;
   width:100%;
 ${Medium({  width:"50vw"})} ;
-${Medium({  width:"30vw"})} ;
+${Large({  width:"30vw"})} ;
 
 
 
