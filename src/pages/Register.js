@@ -36,8 +36,9 @@ const Wrapper = styled.div`
 const Title = styled.h1`
 padding-top:20%;
 ${Large({ paddingTop:"0"})};
+${Medium({ paddingTop:"20%", paddingBottom:"5%"})};
 
-  grid-column: span 2;
+  /* grid-column: span 2; */
   font-size: 10vw;
   text-align: center;
   font-weight:800;
@@ -73,6 +74,9 @@ const Alert = styled.div`
   height:100%;
 `;
 
+const Label = styled.label`
+  
+`;
 
 
 const Register = () => {
@@ -97,17 +101,26 @@ const Register = () => {
     <Wrapper>
       <Form >
        {alert === true ? <Alert>Please enter name</Alert> : ""}
+       <Label for="name" >FULL NAME</Label>
         <Input 
-        placeholder="FULL NAME"
+        placeholder="Full name"
         value={name}
       onChange={(e) => setName(e.target.value)}
+      id="name"
         />
+       <Label for="email" >EMAIL</Label>
+
         <Input 
+         id="email"
         placeholder="Email"
         value={email}
       onChange={(e) => setEmail(e.target.value)}
         />
+
+       <Label for="password" >PASSWORD</Label>
+
         <Input 
+        id="password"
         placeholder="Password"
         value={password}
       onChange={(e) => setPassword(e.target.value)}
@@ -123,7 +136,7 @@ const Register = () => {
           onClick={register}
         />
         <Button
-          text="GOOGLE"
+          text="WITH GOOGLE"
           shadowColor="#191D1E"
           color="#fff"
           bgColor="Black"

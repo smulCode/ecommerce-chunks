@@ -87,7 +87,7 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
 
   const [user, loading, error] = useAuthState(auth);
  
-console.log(user)
+
 
 
 

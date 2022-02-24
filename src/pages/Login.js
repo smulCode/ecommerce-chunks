@@ -148,7 +148,7 @@ const Login = () => {
           />
           
           <Button
-            text="GOOGLE"
+            text="WITH GOOGLE"
             shadowColor="#191D1E"
             color="#fff"
             bgColor="Black"

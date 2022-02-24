@@ -92,7 +92,7 @@ const Reset = () => {
           />
         
           <Button
-            text="Send password reset email"
+            text="RESET PASSWORD"
             shadowColor="#191D1E"
             color="#fff"
             bgColor="Black"

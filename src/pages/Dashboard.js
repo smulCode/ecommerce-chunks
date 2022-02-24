@@ -47,25 +47,34 @@ ${Large({ paddingTop:"0"})};
   
 `;
 
-const Form = styled.div`
-  display: flex;
+
+const UserContainer = styled.div`
+    display: flex;
   flex-direction: column;
 
-  a{
-    margin: 2em 0px;
+  margin:1em;
 
-text-decoration: underline;
-cursor: pointer;
-  }
+
 `;
 
+const WelkomMessage = styled.div`
+  background:white;
+  border-radius:10px;
 
-
-const Alert = styled.div`
-  background:red;
-  color:white;
 `;
 
+const Text = styled.p`
+  
+`;
+
+const UserData = styled.div`
+  font-size: 2rem;
+`;
+
+const Span = styled.span`
+    font-size:4rem;
+    line-height:1rem;
+`;
 
 
 
@@ -95,13 +104,20 @@ const Dashboard = () => {
     <Container>
     <Navbar color="black" LogoColor="black" />
  
-      <Title>DASHBOARD</Title>
+      <Title>Account overview</Title>
     <Wrapper>
  
-      <Form >
+      <UserContainer >
+        <WelkomMessage>
+          <Span>Hi {name},</Span>
+
+here you will find all your relevant information</WelkomMessage>
       
-      <div>{name}</div>
-      <div>{user?.email}</div>
+      <UserData>NAME: {name}</UserData>
+      <UserData>EMAIL: {user?.email}</UserData>
+       
+ 
+      </UserContainer>
       
         <Button
           text="LOG OUT"
@@ -112,9 +128,6 @@ const Dashboard = () => {
           onClick={logout}
         />
         
-       
- 
-      </Form>
     </Wrapper>
 
   
