@@ -2,14 +2,28 @@ import { StyledFooter, Logo,Text,Form,Input,Wrapper,Container,BrandName} from ".
 import Button from "../Button";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import {useState} from "react"
 
 const Footer = ({color,bgColor}) => {
+    const [email, setEmail] = useState("")
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+//TODO: CHANGE ONSUBMIT TO THANKS FOR SUBSCRIBING 
+    setEmail("")
+  }
+
+
   return (
     <StyledFooter>
       <Logo color={color} bgColor={bgColor}>CHUNKS!</Logo>
       <Text>LET’S PASS NOTES - SUBSCRIBE TO OUR EMAIL LIST.</Text>
-      <Form>
-        <Input placeholder="Email" />
+      <Form onSubmit={handleSubmit}>
+      <Input 
+          placeholder="Email"
+          value={email}
+        onChange={(e) => setEmail(e.target.value)}
+          />
         <Button
           text="SUBMIT"
           shadowColor="#FFF"

@@ -67,6 +67,11 @@ const Input = styled.input`
 `;
 
 
+const Alert = styled.div`
+  background:red;
+  color:white;
+  height:100%;
+`;
 
 
 
@@ -75,9 +80,13 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [user, loading, error] = useAuthState(auth);
+  const [alert, setAlert] = useState(false)
+
   const navigate = useNavigate();
   const register = () => {
-    if (!name) alert("Please enter name");
+    // if (!name) alert("Please enter name");
+    !name ? setAlert(true) : setAlert(false);
+
     registerWithEmailAndPassword(name, email, password);
   };
   return (
@@ -87,6 +96,7 @@ const Register = () => {
       <Title>REGISTER</Title>
     <Wrapper>
       <Form >
+       {alert === true ? <Alert>Please enter name</Alert> : ""}
         <Input 
         placeholder="FULL NAME"
         value={name}

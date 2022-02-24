@@ -5,11 +5,15 @@ import Footer from "../components/Footer";
 import { Medium,Large,ExtraExtraLarge } from "../responsive";
 
 
+
+
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { auth, sendPasswordReset } from "../firebase";
+
+
+import { auth, db, logout } from "../firebase";
+import { query, collection, getDocs, where } from "firebase/firestore";
 
 const Container = styled.div`
   /* width: 100vw;
@@ -55,60 +59,69 @@ cursor: pointer;
   }
 `;
 
-const Input = styled.input`
-  flex: 1;
-  min-width: 20%;
-  margin: 5px 0;
-  padding: 1em;
-  border-radius: 8px;
-  border: none;
+
+
+const Alert = styled.div`
+  background:red;
+  color:white;
 `;
 
 
 
 
-
-
-const Reset = () => {
-  const [email, setEmail] = useState("");
+const Dashboard = () => {
   const [user, loading, error] = useAuthState(auth);
+  const [name, setName] = useState("");
   const navigate = useNavigate();
+  const fetchUserName = async () => {
+    try {
+      const q = query(collection(db, "users"), where("uid", "==", user?.uid));
+      const doc = await getDocs(q);
+      const data = doc.docs[0].data();
+      setName(data.name);
+    } catch (err) {
+      console.error(err);
+      alert("An error occured while fetching user data");
+
+    }
+  };
   useEffect(() => {
     if (loading) return;
-    if (user) navigate("/dashboard");
+    if (!user) return navigate("/");
+    fetchUserName();
   }, [user, loading]);
+  
   return (
     <Container>
-      <Navbar color="black" LogoColor="black" />
-   
-        <Title>RESET</Title>
-      <Wrapper>
-   
-        <Form >
-          <Input 
-          placeholder="Email"
-          value={email}
-        onChange={(e) => setEmail(e.target.value)}
-          />
+    <Navbar color="black" LogoColor="black" />
+ 
+      <Title>DASHBOARD</Title>
+    <Wrapper>
+ 
+      <Form >
+      
+      <div>{name}</div>
+      <div>{user?.email}</div>
+      
+        <Button
+          text="LOG OUT"
+          shadowColor="#191D1E"
+          color="#fff"
+          bgColor="Black"
+          width="100%"
+          onClick={logout}
+        />
         
-          <Button
-            text="Send password reset email"
-            shadowColor="#191D1E"
-            color="#fff"
-            bgColor="Black"
-            width="100%"
-            onClick={() => sendPasswordReset(email)}
-          />
-          
-         
-          Don't have an account? 
-          <Link to="/Register">Register now</Link>
-        </Form>
-      </Wrapper>
+       
+ 
+      </Form>
+    </Wrapper>
 
-    
-      <Footer/>
-    </Container>
+  
+    <Footer/>
+  </Container>
+
+
   );
-};
-export default Reset;
+}
+export default Dashboard;

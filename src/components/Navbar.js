@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import PersonIcon from '@mui/icons-material/Person';
 
 import { useState, useRef,useEffect } from "react";
 import { useOnClickOutside } from "../hooks";
@@ -9,6 +10,9 @@ import Cart from "../components/Cart";
 import CartMenuBurger from "../components/CartMenuBurger";
 import { Link } from "react-router-dom";
 
+import { auth, db, logout } from "../firebase";
+
+import { useAuthState } from "react-firebase-hooks/auth";
 
 
 import gsap from "gsap";
@@ -81,7 +85,9 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
   const [openCart, setOpenCart] = useState(false);
   const node = useRef();
 
-
+  const [user, loading, error] = useAuthState(auth);
+ 
+console.log(user)
 
 
 
@@ -137,7 +143,8 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
         <Right>
           <MenuItem color={color} open={open} setOpen={setOpen}>
             <Link to="/Login/">
-              <PersonOutlineOutlinedIcon />
+             {!user ? <PersonOutlineOutlinedIcon /> : <PersonIcon/>}
+              
             </Link>
           </MenuItem>
           <MenuItem open={open} setOpen={setOpen}>
