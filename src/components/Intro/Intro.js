@@ -9,15 +9,15 @@ import {
   Cta5,
   Cta6,
   CtaText,
-
   BrandName,
 } from "./Intro.styled";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const Intro = () => {
+
+
   const StyledIntroRef = useRef(null);
-  const ButtonRef = useRef(null);
   const Cta1Ref = useRef(null);
   const Cta2Ref = useRef(null);
   const Cta3Ref = useRef(null);
@@ -26,7 +26,6 @@ const Intro = () => {
   const Cta6Ref = useRef(null);
 
   useEffect(() => {
-    const Button = ButtonRef.current;
     const StyledIntro = StyledIntroRef.current;
     const Cta1 = Cta1Ref.current;
     const Cta2 = Cta2Ref.current;
@@ -109,6 +108,9 @@ const Intro = () => {
         { position:"absolute" },
         
       );
+
+
+      
   }, []);
 
   return (

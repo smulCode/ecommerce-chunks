@@ -17,7 +17,6 @@ console.log(Intro)
   return (
     <div>
 
-
       <Navbar  bgColor="transparent" LogoColor="transparent" color="#fff"/>
   
       {/* <Announcement /> */}
