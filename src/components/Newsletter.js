@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import SendIcon from "@mui/icons-material/Send";
-import { mobile } from "../responsive";
+
 import { desktop } from "../responsive";
 const Container = styled.div`
   height: 60vh;
@@ -9,7 +9,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
 `;
 
 const Title = styled.h1`
@@ -21,7 +20,6 @@ const Desc = styled.div`
   font-weight: 300;
   margin-bottom: 20px;
   text-align: center;
-
 `;
 
 const InputContainer = styled.div`

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "../components/Button";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Medium,Large,ExtraExtraLarge } from "../responsive";
+import { Medium,Large } from "../responsive";
 
 
 
@@ -16,20 +16,16 @@ import { auth, db, logout } from "../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 
 const Container = styled.div`
-  /* width: 100vw;
-  height: 100vh; */
-
-
   background-color: ${({ theme }) => theme.secondaryBg};
-
 `;
 
 
 
 const Wrapper = styled.div`
-  
+
   width: 100%;
   padding: 20px;
+  padding:2rem 1rem;
   ${Medium({ width:"60%", margin:"0 auto"})};
   ${Large({ width:"100%", margin:"0 auto"})};
 
@@ -37,7 +33,7 @@ const Wrapper = styled.div`
 
 const Title = styled.h1`
 padding-top:20%;
-${Large({ paddingTop:"0"})};
+${Large({ paddingBottom:"10%"})};
 
   grid-column: span 2;
   font-size: 10vw;
@@ -55,31 +51,48 @@ const UserContainer = styled.div`
   margin:1em;
 
 
+
 `;
 
-const WelkomMessage = styled.div`
+const WelcomeMessage = styled.div`
   background:white;
   border-radius:10px;
+  height:30vh;
+
+  padding:2rem 1rem;
+  display: flex;
+  justify-content:space-evenly;
+  flex-direction: column;
 
 `;
 
 const Text = styled.p`
-  
+  font-size: 1.5rem;
 `;
 
 const UserData = styled.div`
   font-size: 2rem;
+
+  margin:0.5em 0;
 `;
 
 const Span = styled.span`
-    font-size:4rem;
+    font-size:2rem;
+    font-weight:bold;
     line-height:1rem;
+    ${Large({ paddingTop:"0"})};
+ 
 `;
 
 
+const UserView = styled.div`
+  border-top:2px solid black;
+  margin:1em 0;
+`;
+
 
 const Dashboard = () => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
   const [name, setName] = useState("");
   const navigate = useNavigate();
   const fetchUserName = async () => {
@@ -108,13 +121,18 @@ const Dashboard = () => {
     <Wrapper>
  
       <UserContainer >
-        <WelkomMessage>
+        <WelcomeMessage>
           <Span>Hi {name},</Span>
+<Text> 
 
-here you will find all your relevant information</WelkomMessage>
-      
-      <UserData>NAME: {name}</UserData>
-      <UserData>EMAIL: {user?.email}</UserData>
+here you will find all your relevant information
+</Text>
+</WelcomeMessage>
+      <UserView>
+      <UserData>Name: {name}</UserData>
+      <UserData>Email: {user?.email}</UserData>
+        
+         </UserView>
        
  
       </UserContainer>

@@ -2,7 +2,6 @@ export const addToCart = (id) => {
   return {
     type: "ADD_TO_CART",
     id,
-
   };
 };
 //to remove the item completely

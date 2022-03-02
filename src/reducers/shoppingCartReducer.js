@@ -6,14 +6,11 @@ const initState = {
   total: 0.0,
 };
 
-
 const shoppingCartReducer = (state = initState, action) => {
-  // console.log(state)
-  // console.log(action.payload)
+
   if (action.type === "ADD_TO_CART") {
     let addedItem = state.Products.find((item) => item.id === action.id);
     //check if the action id exists in the addedItems
-    // console.log(addedItem)
     let existed_item = state.addedItems.find((item) => action.id === item.id);
     if (existed_item) {
       addedItem.quantity += 1;
