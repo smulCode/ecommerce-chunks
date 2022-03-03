@@ -1,7 +1,7 @@
 {
   "name": "ecommerce-chunks",
   "version": "0.1.0",
-  "homepage": "https://github.com/smulCode/ecommerce-chunks",
+  "homepage": "https://smulcode.github.io/ecommerce-chunks/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
@@ -26,7 +26,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-   "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
