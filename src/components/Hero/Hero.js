@@ -22,7 +22,7 @@ const Hero = () => {
 
   useEffect(() => {
    const el = ContentRef.current;
-   gsap.fromTo(el, {x:"-100%",y:"100vh"},{x:0,y:0,duration:2, ease: "expo.inOut"})
+   gsap.fromTo(el, {x:"-1%",y:"3%"},{x:0,y:0,repeat:-1, duration:4, ease:"power2.inOut" ,yoyo: true,})
 
 
   }, [])
@@ -30,12 +30,12 @@ const Hero = () => {
 
   return (
     <Container>
-      <Wrapper  ref={ContentRef}>
+      <Wrapper  >
         <Headline>CHUNKS!</Headline>
         <Content />
       </Wrapper>
       <CenterContent>
-        <ImgContainer> 
+        <ImgContainer ref={ContentRef}> 
         
         <Image src={chocoBar}></Image>
         </ImgContainer>

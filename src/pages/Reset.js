@@ -79,6 +79,13 @@ const Reset = () => {
     if (loading) return;
     if (user) navigate("/dashboard");
   }, [user, loading]);
+
+  useEffect(() => {
+    // This will run when the page first loads and whenever the title changes
+    document.title = "Reset";
+  }, []);
+
+
   return (
     <Container>
       <Navbar color="black" LogoColor="black" />

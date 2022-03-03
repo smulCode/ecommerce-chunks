@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Medium, Large } from "../responsive";
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   auth,
@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 20px;
   ${Medium({ width: "60%", margin: "0 auto" })};
-  ${Large({ width: "100%", margin: "0 auto" })};
+  ${Large({ width: "40%", margin: "0 auto" })};
 `;
 
 const Title = styled.h1`
@@ -73,6 +73,11 @@ const Register = () => {
   const [name, setName] = useState("");
   const [alert, setAlert] = useState(false);
 
+
+  useEffect(() => {
+    // This will run when the page first loads and whenever the title changes
+    document.title = "Register";
+  }, []);
 
   const register = () => {
     // if (!name) alert("Please enter name");

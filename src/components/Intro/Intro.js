@@ -92,16 +92,18 @@ const Intro = () => {
       .fromTo(
         AllCta,
         { opacity: 1, scale: 1.5 },
-        { opacity: 1, scale: 2.5, ease: "elastic.out(1.5, 0.1)" },
+        { opacity: 1, scale: 2, ease: "elastic.out(1.5, 0.1)" },
         "<20%"
       )
+     
       .to(AllCta, { color: "white", ease: "power3" })
+  
       .to(
         StyledIntro,
         { backgroundColor: "hotpink", ease: "power3.Out", opacity: "0" },
         "<70%"
       )
-      .to(StyledIntro, { position: "absolute" });
+      .to(StyledIntro, { display:"none" });
   }, []);
 
   return (

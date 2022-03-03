@@ -3,8 +3,10 @@ import styled from "styled-components";
 export const StyledIntro = styled.div`
   background: #111;
   height: 100vh;
+  width: 100%;
   position: relative;
 z-index:100;
+  position:fixed;
 `;
 
 export const Cta = styled.div`
@@ -16,6 +18,7 @@ export const Cta = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
 `;
 
 export const Cta1 = styled.span`
@@ -64,4 +67,6 @@ export const CtaBtn = styled.button`
   }
 `;
 
-export const BrandName = styled.h2``;
+export const BrandName = styled.h2`
+
+`;

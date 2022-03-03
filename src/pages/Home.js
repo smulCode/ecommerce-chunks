@@ -5,13 +5,16 @@ import ExtraFlavor from "../components/ExtraFlavor"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Intro from "../components/Intro";
-
+import {useEffect} from "react"
 
 
 
 const Home = () => {
 
-
+  useEffect(() => {
+    // This will run when the page first loads and whenever the title changes
+    document.title = "CHUNKS";
+  }, []);
 
   return (
     <div>

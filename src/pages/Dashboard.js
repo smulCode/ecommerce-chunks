@@ -27,16 +27,16 @@ const Wrapper = styled.div`
   padding: 20px;
   padding:2rem 1rem;
   ${Medium({ width:"60%", margin:"0 auto"})};
-  ${Large({ width:"100%", margin:"0 auto"})};
+  ${Large({ width:"40%", margin:"0 auto"})};
 
 `;
 
 const Title = styled.h1`
 padding-top:20%;
-${Large({ paddingBottom:"10%"})};
+${Large({ paddingBottom:"0%",paddingTop:"10%"})};
 
   grid-column: span 2;
-  font-size: 10vw;
+  font-size: 5vw;
   text-align: center;
   font-weight:800;
   line-height:1rem;
@@ -113,6 +113,11 @@ const Dashboard = () => {
     fetchUserName();
   }, [user, loading]);
   
+
+  useEffect(() => {
+    // This will run when the page first loads and whenever the title changes
+    document.title = "Dashboard";
+  }, []);
   return (
     <Container>
     <Navbar color="black" LogoColor="black" />

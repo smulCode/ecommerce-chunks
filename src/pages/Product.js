@@ -29,6 +29,11 @@ const ProductPage = () => {
   }, [id]);
   
 
+  useEffect(() => {
+    // This will run when the page first loads and whenever the title changes
+    document.title = id;
+  }, [id]);
+
   return (
     <Container>
        <Navbar bgColor={product.color}  LogoColor={product.bgColor} color={product.bgColor}/>

@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import SignUp from "../components/SignUp";
 import Footer from "../components/Footer";
 import { Medium, Large } from "../responsive";
+import { useParams } from "react-router-dom";
 
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -79,6 +80,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
+  const { id } = useParams();
   useEffect(() => {
     if (loading) {
       //TODO: maybe trigger a loading screen
@@ -87,6 +89,13 @@ const Login = () => {
     if (user) navigate("/dashboard");
   }, [user, loading]);
 
+  useEffect(() => {
+    // This will run when the page first loads and whenever the title changes
+    document.title = "Login";
+  }, []);
+
+
+  
   return (
     <Container>
       <Navbar color="black" LogoColor="black" />
