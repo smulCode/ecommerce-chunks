@@ -11,7 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
      <Provider store = { store } >
     <BrowserRouter>
-    basename={"/ecommerce-chunks"}
+    basename={"/ecommerce-chunks"} 
       <App />
     </BrowserRouter>
      </Provider>
