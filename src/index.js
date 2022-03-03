@@ -10,8 +10,7 @@ import {store} from "./store";
 ReactDOM.render(
   <React.StrictMode>
      <Provider store = { store } >
-    <BrowserRouter>
-    basename={"/ecommerce-chunks"} 
+    <BrowserRouter   basename="/ecommerce-chunks" >
       <App />
     </BrowserRouter>
      </Provider>
