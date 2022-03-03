@@ -19,7 +19,7 @@ const Home = () => {
       <Navbar  bgColor="transparent" LogoColor="transparent" color="#fff"/>
   
       {/* <Announcement /> */}
-    
+    <Intro/>
       <Hero/>
       <FlavorSection/>
 
