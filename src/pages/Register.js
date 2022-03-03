@@ -60,9 +60,9 @@ const Alert = styled.div`
   color: white;
   height: 100%;
   width: fit-content;
-  padding: 0.5rem 3rem;
+  padding: 0.4rem 3rem;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 0.1rem auto;
 `;
 
 const Label = styled.label``;
@@ -72,6 +72,8 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [alert, setAlert] = useState(false);
+const [passwordCheck, setPasswordCheck] = useState(false)
+
 
 
   useEffect(() => {
@@ -81,7 +83,9 @@ const Register = () => {
 
   const register = () => {
     // if (!name) alert("Please enter name");
-    !name ? setAlert(true) : setAlert(false);
+    !name || !email || !password ? setAlert(true) : setAlert(false);
+    password < 6 ? setPasswordCheck(true) : setPasswordCheck(false)
+   
 
     registerWithEmailAndPassword(name, email, password);
   };
@@ -92,7 +96,7 @@ const Register = () => {
       <Title>REGISTER</Title>
       <Wrapper>
         <Form>
-          {alert === true ? <Alert>Please enter name!</Alert> : ""}
+          {alert === true ? <Alert>Please enter all fields!</Alert> : ""}
           <Label for="name">FULL NAME</Label>
           <Input
             placeholder="Full name"
@@ -107,6 +111,8 @@ const Register = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+          {passwordCheck   ? <Alert>Password must be at least 6 characters</Alert> : ""}
+
           <Label for="password">PASSWORD</Label>
           <Input
             id="password"

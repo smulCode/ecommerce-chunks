@@ -49,6 +49,13 @@ export const Text = styled.p`
   z-index: 2;
   line-height: 2.5rem;
   transition: all 300ms ease-in-out;
+
+
+  :nth-of-type(2){
+
+position: absolute;
+bottom:15%;
+  }
 `;
 
 export const ImgContainer = styled.div`
@@ -104,7 +111,7 @@ export const StyledMenu = styled.nav`
   ${Medium({
     display: "grid",
     gridTemplateColumns: "repeat(3,1fr)",
-    height: "98vh",
+    height: "94vh",
     gridTemplateRows: "1fr 1fr 10%",
   })};
   ${ExtraExtraLarge({ gridTemplateRows: "1fr 1fr 10%" })};
@@ -124,6 +131,8 @@ export const StyledMenu = styled.nav`
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   z-index: 3;
   ${Medium({ paddingTop: "8%" })};
+  ${ExtraExtraLarge({ paddingTop: "4%" })};
+  
 
   p:hover {
     /* color: ${({ theme }) => theme.primaryAccent}; */
