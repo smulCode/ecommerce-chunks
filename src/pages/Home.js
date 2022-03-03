@@ -12,7 +12,6 @@ import Intro from "../components/Intro";
 const Home = () => {
 
 
-console.log(Intro)
 
   return (
     <div>

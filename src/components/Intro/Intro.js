@@ -15,8 +15,6 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const Intro = () => {
-
-
   const StyledIntroRef = useRef(null);
   const Cta1Ref = useRef(null);
   const Cta2Ref = useRef(null);
@@ -103,14 +101,7 @@ const Intro = () => {
         { backgroundColor: "hotpink", ease: "power3.Out", opacity: "0" },
         "<70%"
       )
-      .to(
-        StyledIntro,
-        { position:"absolute" },
-        
-      );
-
-
-      
+      .to(StyledIntro, { position: "absolute" });
   }, []);
 
   return (

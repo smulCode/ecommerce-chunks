@@ -27,13 +27,15 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 20px;
   ${Medium({ width:"60%", margin:"0 auto"})};
-  ${Large({ width:"100%", margin:"0 auto"})};
+  ${Medium({ width:"40%", margin:"0 auto"})};
+
 
 `;
 
 const Title = styled.h1`
 padding-top:20%;
-${Large({ paddingTop:"0"})};
+${Medium({ paddingBottom:"5%", })};
+${Large({ paddingBottom:"5%", paddingTop:"10%"})};
 
   grid-column: span 2;
   font-size: 10vw;

@@ -1,6 +1,6 @@
 // Menu.styled.js
 import styled from "styled-components";
-import { Medium, Large, ExtraExtraLarge } from "../../responsive";
+import { Small, Medium, Large, ExtraExtraLarge } from "../../responsive";
 
 export const StyledButton = styled.button`
   position: relative;
@@ -55,7 +55,6 @@ export const ImgContainer = styled.div`
   display: none;
   margin: -2em 0;
   ${Medium({ display: "block" })};
-  /* ${ExtraExtraLarge({ margin: "-3em 0" })} ; */
 `;
 export const Image = styled.img`
   height: 100%;
@@ -73,8 +72,6 @@ export const Image = styled.img`
 export const Nav = styled.nav`
   position: absolute;
   inset: 0;
-  /* display: flex;
-  gap: 0.5em; */
 `;
 
 export const Container = styled.div`
@@ -108,7 +105,7 @@ export const StyledMenu = styled.nav`
     display: "grid",
     gridTemplateColumns: "repeat(3,1fr)",
     height: "98vh",
-    gridTemplateRows: "1fr 1fr 10%"
+    gridTemplateRows: "1fr 1fr 10%",
   })};
   ${ExtraExtraLarge({ gridTemplateRows: "1fr 1fr 10%" })};
   display: grid;
@@ -136,6 +133,7 @@ export const StyledMenu = styled.nav`
 
   a {
     font-size: 2rem;
+
     text-transform: uppercase;
     font-weight: bold;
     /* color: ${({ theme }) => theme.primaryDark}; */

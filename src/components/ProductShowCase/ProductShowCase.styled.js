@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Medium,Large,ExtraExtraLarge } from "../../responsive";
+
 
 export const StyledProductShowCase = styled.div`
   
@@ -40,6 +42,9 @@ justify-content:center;
   font-size: 1.2em;
   text-align: center;
   font-weight:200;
+  ${Medium({  width:"60%"})};
+  ${Large({  width:"45%"})};
+
 
   
 `;
