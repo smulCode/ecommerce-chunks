@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.js": "/smulCode/ecommerce-chunks/static/js/main.308612a6.js",
+    "static/js/787.0b7a1854.chunk.js": "/smulCode/ecommerce-chunks/static/js/787.0b7a1854.chunk.js",
+    "static/media/wrapper-choco.jpg": "/smulCode/ecommerce-chunks/static/media/wrapper-choco.e6cd26728f698ec46bc1.jpg",
+    "static/media/DOUBLEDARK-FRONT.png": "/smulCode/ecommerce-chunks/static/media/DOUBLEDARK-FRONT.933b2778200fae39e4b8.png",
+    "static/media/SALTED-FRONT.png": "/smulCode/ecommerce-chunks/static/media/SALTED-FRONT.0ff95741c535f4820c0b.png",
+    "static/media/ALMOND-FRONT.png": "/smulCode/ecommerce-chunks/static/media/ALMOND-FRONT.bdec5840a5f2bb6e36cd.png",
+    "static/media/HAZELNUT-FRONT.png": "/smulCode/ecommerce-chunks/static/media/HAZELNUT-FRONT.5a08c46c1d89b47b2006.png",
+    "static/media/4Bars-front.png": "/smulCode/ecommerce-chunks/static/media/4Bars-front.4391bfb83fc4126fd166.png",
+    "static/media/BANANA-FRONT.png": "/smulCode/ecommerce-chunks/static/media/BANANA-FRONT.fa3816736fa6315306a7.png",
+    "static/media/SALTED-OVERHEAD.png": "/smulCode/ecommerce-chunks/static/media/SALTED-OVERHEAD.acfc57c81d511e2aac0a.png",
+    "static/media/VARIETY_SPLIT_LG_1000x.png": "/smulCode/ecommerce-chunks/static/media/VARIETY_SPLIT_LG_1000x.8b6c381fc2966e1af69d.png",
+    "static/media/SALTED-SIDE.png": "/smulCode/ecommerce-chunks/static/media/SALTED-SIDE.9107b0083699f24c84cf.png",
+    "static/media/choco-part-bar.png": "/smulCode/ecommerce-chunks/static/media/choco-part-bar.9107b0083699f24c84cf.png",
+    "static/media/DOUBLEDARK-OVERHEAD.png": "/smulCode/ecommerce-chunks/static/media/DOUBLEDARK-OVERHEAD.18cd02673255369521e6.png",
+    "static/media/ALMOND-OVERHEAD.png": "/smulCode/ecommerce-chunks/static/media/ALMOND-OVERHEAD.509e96efd38145653880.png",
+    "static/media/BANANA-OVERHEAD.png": "/smulCode/ecommerce-chunks/static/media/BANANA-OVERHEAD.509e96efd38145653880.png",
+    "static/media/HAZELNUT-OVERHEAD.png": "/smulCode/ecommerce-chunks/static/media/HAZELNUT-OVERHEAD.509e96efd38145653880.png",
+    "static/media/Chocolate-Bar-Packaging-Mockup-removebg-preview.png": "/smulCode/ecommerce-chunks/static/media/Chocolate-Bar-Packaging-Mockup-removebg-preview.e3efd8922a6ce0be15aa.png",
+    "static/media/coconut.png": "/smulCode/ecommerce-chunks/static/media/coconut.6f151a497537d3274c71.png",
+    "static/media/piece.png": "/smulCode/ecommerce-chunks/static/media/piece.9ad91a50241e3e16214f.png",
+    "static/media/Snack-Bar-Mockup-removebg-preview.png": "/smulCode/ecommerce-chunks/static/media/Snack-Bar-Mockup-removebg-preview.53dbd26cdd1c6e26a860.png",
+    "static/media/nut.png": "/smulCode/ecommerce-chunks/static/media/nut.d962f49a06b212aff718.png",
+    "static/media/sugar.png": "/smulCode/ecommerce-chunks/static/media/sugar.ffb738dfe81e67bed03f.png",
+    "index.html": "/smulCode/ecommerce-chunks/index.html",
+    "main.308612a6.js.map": "/smulCode/ecommerce-chunks/static/js/main.308612a6.js.map",
+    "787.0b7a1854.chunk.js.map": "/smulCode/ecommerce-chunks/static/js/787.0b7a1854.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.308612a6.js"
+  ]
+}
