@@ -1,12 +1,10 @@
 // Burger.styled.js
-import styled from 'styled-components';
-import { Medium,Large,ExtraExtraLarge } from "../../responsive";
-
-
+import styled from "styled-components";
+import { Medium, Large, ExtraExtraLarge } from "../../responsive";
 
 export const StyledBurger = styled.div`
   position: absolute;
-  top:1em;
+  top: 1em;
   left: 1rem;
   display: flex;
   flex-direction: column;
@@ -20,36 +18,32 @@ export const StyledBurger = styled.div`
   z-index: 5;
   position: fixed;
 
-
   &:focus {
     outline: none;
   }
-  
+
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ theme, open }) => open ? theme.primaryDark : theme.primaryLight};
-    background: ${({ color, open }) =>
-      open ? "#000" : color};
+    background: ${({ theme, open }) =>
+      open ? theme.primaryDark : theme.primaryLight};
+    background: ${({ color, open }) => (open ? "#000" : color)};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
 
-  
     :first-child {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
 
     :nth-child(2) {
-      opacity: ${({ open }) => open ? '0' : '1'};
-      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+      opacity: ${({ open }) => (open ? "0" : "1")};
+      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
     }
 
     :nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
-
-
 `;

@@ -4,7 +4,9 @@ import counterReducer from "./counterReducer";
 import shoppingCartReducer from "./shoppingCartReducer";
 
 const allReducers = combineReducers({
-  productsReducer, counterReducer,shoppingCartReducer
+  productsReducer,
+  counterReducer,
+  shoppingCartReducer,
 });
 
 export default allReducers;

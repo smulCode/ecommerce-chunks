@@ -1,21 +1,14 @@
+const productsReducer = (state = [], action) => {
+  switch (action.type) {
+    case "ADD_TO_CART2":
+      // let addedItem = state.find(item=> item.name === action.name)
+      // //check if the action id exists in the addedItems
 
-const productsReducer = ( state = [], action) => {
+      return [...state, action.payload];
 
-
-
-    switch(action.type) {
-      case "ADD_TO_CART2":
-        // let addedItem = state.find(item=> item.name === action.name)
-        // //check if the action id exists in the addedItems
-    
-        return [
-          ...state,
-        action.payload,
-        ];
-  
-     
-        default : return state;
-    }
+    default:
+      return state;
   }
-  
-  export default productsReducer;
+};
+
+export default productsReducer;

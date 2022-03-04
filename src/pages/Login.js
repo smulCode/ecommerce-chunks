@@ -27,7 +27,6 @@ const FlexContainer = styled.div`
     placeItems: "center",
     gap: "0 10%",
   })};
-
 `;
 
 const Wrapper = styled.div`
@@ -94,8 +93,6 @@ const Login = () => {
     document.title = "Login";
   }, []);
 
-
-  
   return (
     <Container>
       <Navbar color="black" LogoColor="black" />

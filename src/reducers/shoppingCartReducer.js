@@ -7,7 +7,6 @@ const initState = {
 };
 
 const shoppingCartReducer = (state = initState, action) => {
-
   if (action.type === "ADD_TO_CART") {
     let addedItem = state.Products.find((item) => item.id === action.id);
     //check if the action id exists in the addedItems

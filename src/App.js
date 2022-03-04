@@ -7,16 +7,11 @@ import Login from "./pages/Login";
 import GlobalStyles from "./components/styles/Global";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./components/styles/theme";
-import { Routes, Route, useParams } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-import {useEffect} from "react"
-
 
 
 const App = () => {
-
-
-  
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />

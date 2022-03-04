@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Medium, Large } from "../responsive";
 
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   auth,
@@ -72,9 +72,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [alert, setAlert] = useState(false);
-const [passwordCheck, setPasswordCheck] = useState(false)
-
-
+  const [passwordCheck, setPasswordCheck] = useState(false);
 
   useEffect(() => {
     // This will run when the page first loads and whenever the title changes
@@ -84,8 +82,7 @@ const [passwordCheck, setPasswordCheck] = useState(false)
   const register = () => {
     // if (!name) alert("Please enter name");
     !name || !email || !password ? setAlert(true) : setAlert(false);
-    password < 6 ? setPasswordCheck(true) : setPasswordCheck(false)
-   
+    password < 6 ? setPasswordCheck(true) : setPasswordCheck(false);
 
     registerWithEmailAndPassword(name, email, password);
   };
@@ -111,8 +108,11 @@ const [passwordCheck, setPasswordCheck] = useState(false)
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          {passwordCheck   ? <Alert>Password must be at least 6 characters</Alert> : ""}
-
+          {passwordCheck ? (
+            <Alert>Password must be at least 6 characters</Alert>
+          ) : (
+            ""
+          )}
           <Label for="password">PASSWORD</Label>
           <Input
             id="password"
