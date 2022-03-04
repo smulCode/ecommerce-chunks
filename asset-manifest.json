@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/ecommerce-chunks/static/js/main.74111b4a.js",
+    "main.js": "/ecommerce-chunks/static/js/main.07aa5f3c.js",
     "static/js/787.0b7a1854.chunk.js": "/ecommerce-chunks/static/js/787.0b7a1854.chunk.js",
     "static/media/wrapper-choco.jpg": "/ecommerce-chunks/static/media/wrapper-choco.e6cd26728f698ec46bc1.jpg",
     "static/media/DOUBLEDARK-FRONT.png": "/ecommerce-chunks/static/media/DOUBLEDARK-FRONT.933b2778200fae39e4b8.png",
@@ -23,10 +23,10 @@
     "static/media/nut.png": "/ecommerce-chunks/static/media/nut.d962f49a06b212aff718.png",
     "static/media/sugar.png": "/ecommerce-chunks/static/media/sugar.ffb738dfe81e67bed03f.png",
     "index.html": "/ecommerce-chunks/index.html",
-    "main.74111b4a.js.map": "/ecommerce-chunks/static/js/main.74111b4a.js.map",
+    "main.07aa5f3c.js.map": "/ecommerce-chunks/static/js/main.07aa5f3c.js.map",
     "787.0b7a1854.chunk.js.map": "/ecommerce-chunks/static/js/787.0b7a1854.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.74111b4a.js"
+    "static/js/main.07aa5f3c.js"
   ]
 }
