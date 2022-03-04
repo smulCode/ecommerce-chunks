@@ -73,9 +73,7 @@ const MenuItem = styled.div`
   font-size: 14px;
   margin-left: 35px;
   color: ${(props) => props.color};
-  /* z-index: 10; */
-  /* color: ${({ theme, open }) =>
-    open ? theme.primaryDark : theme.primaryLight}; */
+ 
 `;
 
 
@@ -84,6 +82,7 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
   const [open, setOpen] = useState(false);
   const [openCart, setOpenCart] = useState(false);
   const node = useRef();
+  const point =useRef();
 
   const [user, loading, error] = useAuthState(auth);
  
@@ -128,6 +127,7 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
 
 
   useOnClickOutside(node, () => setOpen(false));
+  useOnClickOutside(point, () => setOpenCart(false));
   return (
     <Container ref={containerRef} color={color} >
       <Wrapper>
@@ -140,7 +140,7 @@ const Navbar = ({ bgColor, color, LogoColor }) => {
             <Link to="/">CHUNKS!</Link>
           </Logo>
         </Center>
-        <Right>
+        <Right  ref={point}>
           <MenuItem color={color} open={open} setOpen={setOpen}>
             <Link to="/Login/">
              {!user ? <PersonOutlineOutlinedIcon /> : <PersonIcon/>}

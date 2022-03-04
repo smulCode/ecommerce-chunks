@@ -103,7 +103,7 @@ const Intro = () => {
         { backgroundColor: "hotpink", ease: "power3.Out", opacity: "0" },
         "<70%"
       )
-      .to(StyledIntro, { display:"none" });
+      .to(StyledIntro, { display:"none" },"<");
   }, []);
 
   return (

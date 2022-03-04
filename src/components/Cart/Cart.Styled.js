@@ -38,28 +38,6 @@ ${Large({  width:"30vw"})} ;
 
   
 
-  /* @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100%;
-    
-  }
-
-  a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s linear;
-
-    @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
-    &:hover {
-      color: ${({ theme }) => theme.primaryHover};
-    }
-  } */
 `;
 
 
@@ -68,6 +46,6 @@ export const CartBag = styled.div`
 
 overflow-y: auto;
 
-height: 57vh;
+height: 60vh;
 
 `;

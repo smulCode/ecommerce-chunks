@@ -17,7 +17,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import CartMenuBurger from "../CartMenuBurger";
 import Cart from "../Cart";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector} from "react-redux";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useEffect, useRef } from "react";
 
