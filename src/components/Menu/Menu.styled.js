@@ -50,11 +50,9 @@ export const Text = styled.p`
   line-height: 2.5rem;
   transition: all 300ms ease-in-out;
 
-
-  :nth-of-type(2){
-
-position: absolute;
-bottom:15%;
+  :nth-of-type(2) {
+    position: absolute;
+    bottom: 15%;
   }
 `;
 
@@ -132,20 +130,15 @@ export const StyledMenu = styled.nav`
   z-index: 3;
   ${Medium({ paddingTop: "8%" })};
   ${ExtraExtraLarge({ paddingTop: "4%" })};
-  
 
   p:hover {
-    /* color: ${({ theme }) => theme.primaryAccent}; */
-
     filter: contrast(4);
   }
 
   a {
     font-size: 2rem;
-
     text-transform: uppercase;
     font-weight: bold;
-    /* color: ${({ theme }) => theme.primaryDark}; */
     text-decoration: none;
     transition: all 0.3s ease-in-out;
   }
