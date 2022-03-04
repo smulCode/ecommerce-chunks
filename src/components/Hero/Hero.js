@@ -19,10 +19,16 @@ import gsap from "gsap";
 const Hero = () => {
 
   const ContentRef = useRef(null);
+  const ArrowRef = useRef(null);
 
   useEffect(() => {
    const el = ContentRef.current;
+   const Arrow = ArrowRef.current;
+
    gsap.fromTo(el, {x:"-=10",y:"-=15"},{x:0,y:0,repeat:-1, duration:4, ease:"Power1.easeInOut" ,yoyo: true,})
+   gsap.fromTo(Arrow, {y:15,},{y:0,repeat:-1, duration:1, ease:"power1" ,yoyo: true,})
+
+
 
 
   }, [])
@@ -61,7 +67,7 @@ const Hero = () => {
       </Button>
       </Link>
      </ContainerBtn>
-      <KeyboardArrowDownIcon/>
+      <KeyboardArrowDownIcon ref={ArrowRef}/>
     </Container>
   );
 };
