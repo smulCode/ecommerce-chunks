@@ -8,12 +8,19 @@ import {
   Checkbox,
 } from "./FixedShoppingCart.styled";
 import Button from "../Button";
-import { pink } from "@mui/material/colors";
-import { useState, useEffect } from "react";
+
+import { useState, useEffect,useRef } from "react";
 import Counter from "../Counter/Counter";
-import { link, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../actions";
+
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
+
+
 
 const FixedShoppingCart = ({color}) => {
   const products = useSelector((state) => state.productsReducer);
@@ -32,8 +39,41 @@ const BagCheck = cartItems.addedItems.find((item) => product.id === item.id)
     setProduct(findSelected);
   }, [id]);
 
+
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+  
+    const el = containerRef.current;
+
+    const showAnim = gsap.from(el, { 
+      yPercent: 100,
+      paused: true,
+      duration: 0.2,
+      // ease: "elastic.out(1.5, 0.3)"
+
+   
+    
+    }).progress(1);
+    
+    ScrollTrigger.create({
+      start: "top 50%",
+      end: "bottom bottom",
+   
+   
+  
+      
+     
+      onUpdate: (self) => {
+        self.direction === -1 ? showAnim.play() : showAnim.reverse()
+      }
+    });
+  }, []);
+
+
+
   return (
-    <StyledFixedShoppingCart>
+    <StyledFixedShoppingCart ref={containerRef}>
       <Container>
         <Checkbox type="checkbox" defaultChecked disabled color={color}/>
         <Price>

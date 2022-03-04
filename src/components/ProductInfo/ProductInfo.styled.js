@@ -16,8 +16,9 @@ position: absolute;
   top: -9em;
   left: 16.4%;
   right: 16%;
-/* border:1px solid; */
 height:30vh;
+
+
   
 `;
 
@@ -33,7 +34,7 @@ export const Wrapper = styled.div`
   justify-content:center;
   align-items:center;
   flex-direction:column;
-  padding-top:7em;
+  padding-top:9em;
 
 `;
 

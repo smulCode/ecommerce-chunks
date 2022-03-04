@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Medium, Large, ExtraExtraLarge } from "../../responsive";
 
 export const StyledIntro = styled.div`
   background: #111;
@@ -49,6 +50,9 @@ export const CtaText = styled.div`
     font-size: 4rem;
     display: block;
     padding: 0rem 0.4rem;
+    ${Medium({ fontSize:"6rem" })};
+    ${Large({ fontSize:"8rem" })};
+    ${ExtraExtraLarge({ fontSize:"10rem" })};
   }
 `;
 
