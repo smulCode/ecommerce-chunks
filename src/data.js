@@ -4,18 +4,15 @@ import BarsFront from "./assets/IMG/4Bars-front.png";
 import BarsSide from "./assets/IMG/VARIETY_SPLIT_LG_1000x.png";
 import ALMONDFront from "./assets/IMG/ALMOND-FRONT.png";
 import ALMONDOverhead from "./assets/IMG/ALMOND-OVERHEAD.png";
-import BANANAFront from "./assets/IMG/BANANA-FRONT.png"
-import BANANAOverhead from "./assets/IMG/BANANA-OVERHEAD.png"
-import DOUBLEDARKFront from "./assets/IMG/DOUBLEDARK-FRONT.png"
-import DOUBLEDARKOverhead from "./assets/IMG/DOUBLEDARK-OVERHEAD.png"
-import HAZELNUTFront from "./assets/IMG/HAZELNUT-FRONT.png"
-import HAZELNUTOverhead from "./assets/IMG/HAZELNUT-OVERHEAD.png"
-import SALTEDFront from "./assets/IMG/SALTED-FRONT.png"
-import SALTEDOverhead from "./assets/IMG/SALTED-OVERHEAD.png"
+import BANANAFront from "./assets/IMG/BANANA-FRONT.png";
+import BANANAOverhead from "./assets/IMG/BANANA-OVERHEAD.png";
+import DOUBLEDARKFront from "./assets/IMG/DOUBLEDARK-FRONT.png";
+import DOUBLEDARKOverhead from "./assets/IMG/DOUBLEDARK-OVERHEAD.png";
+import HAZELNUTFront from "./assets/IMG/HAZELNUT-FRONT.png";
+import HAZELNUTOverhead from "./assets/IMG/HAZELNUT-OVERHEAD.png";
+import SALTEDFront from "./assets/IMG/SALTED-FRONT.png";
+import SALTEDOverhead from "./assets/IMG/SALTED-OVERHEAD.png";
 // import SALTEDSide from "./assets/IMG/SALTED-SIDE.png"
-
-
-
 
 export const Products = [
   {
@@ -23,9 +20,9 @@ export const Products = [
     name: "VARIETY PACK",
     img: VARIETYPACK,
     imgFront: BarsFront,
-    imgOverhead:BarsSide,
-    price: 18.50,
-    priceSubs: (15.50).toFixed(2),
+    imgOverhead: BarsSide,
+    price: 18.5,
+    priceSubs: (15.5).toFixed(2),
     category: "Multipack",
     color: "#EB3581",
     bgColor: "#CDA0FF",
@@ -38,9 +35,9 @@ export const Products = [
     name: "SALTED PEANUT",
     img: mockup,
     imgFront: SALTEDFront,
-    imgOverhead:SALTEDOverhead,
-    price: 18.50,
-    priceSubs: (15.50).toFixed(2),
+    imgOverhead: SALTEDOverhead,
+    price: 18.5,
+    priceSubs: (15.5).toFixed(2),
     category: "Multipack",
     color: "#d84c29",
     bgColor: "#f7c4de",
@@ -53,9 +50,9 @@ export const Products = [
     name: "HAZELNUT CAFE",
     img: mockup,
     imgFront: HAZELNUTFront,
-    imgOverhead:HAZELNUTOverhead,
-    price: 18.50,
-    priceSubs: (15.50).toFixed(2),
+    imgOverhead: HAZELNUTOverhead,
+    price: 18.5,
+    priceSubs: (15.5).toFixed(2),
     category: "Multipack",
     color: "#f7d12f",
     bgColor: "#7e553f",
@@ -68,9 +65,9 @@ export const Products = [
     name: "ALMOND HORCHATA",
     img: mockup,
     imgFront: ALMONDFront,
-    imgOverhead:ALMONDOverhead,
-    price: 18.50,
-    priceSubs: (15.50).toFixed(2),
+    imgOverhead: ALMONDOverhead,
+    price: 18.5,
+    priceSubs: (15.5).toFixed(2),
     category: "Multipack",
     color: "#f4c2db",
     bgColor: "#3e9a47",
@@ -83,9 +80,9 @@ export const Products = [
     name: "DOUBLE DARK MINT",
     img: mockup,
     imgFront: DOUBLEDARKFront,
-    imgOverhead:DOUBLEDARKOverhead,
-    price: 18.50,
-    priceSubs: (15.50).toFixed(2),
+    imgOverhead: DOUBLEDARKOverhead,
+    price: 18.5,
+    priceSubs: (15.5).toFixed(2),
     category: "Multipack",
     color: "#5ddc9c",
     bgColor: "#7e553f",
@@ -98,9 +95,9 @@ export const Products = [
     name: "BANANA PECAN",
     img: mockup,
     imgFront: BANANAFront,
-    imgOverhead:BANANAOverhead,
-    price: 18.50,
-    priceSubs: (15.50).toFixed(2),
+    imgOverhead: BANANAOverhead,
+    price: 18.5,
+    priceSubs: (15.5).toFixed(2),
     category: "Multipack",
     color: "#3e9a47",
     bgColor: "#f7d12f",

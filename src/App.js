@@ -10,7 +10,6 @@ import { theme } from "./components/styles/theme";
 import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
-
 const App = () => {
   return (
     <ThemeProvider theme={theme}>

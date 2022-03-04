@@ -7,12 +7,14 @@ export const StyledFlavorSection = styled.div`
   padding-bottom: 2rem;
   background-color: ${({ theme }) => theme.primaryDark};
   color: ${({ theme }) => theme.primaryLight};
+  
 `;
 
 export const SmallTitle = styled.h3`
   font-weight: 800;
   font-size: 1.5rem;
   ${Medium({ fontSize: "3rem" })};
+  
 `;
 export const BigTitle = styled.h2`
   font-size: 3rem;
@@ -20,12 +22,15 @@ export const BigTitle = styled.h2`
   font-weight: 800;
   line-height: 1.5rem;
   ${Medium({ fontSize: "5rem" })};
+  
 `;
 
 export const TextContent = styled.div`
-  width: 40%;
+  max-width: 40%;
   margin: 0 auto;
   /* padding:2rem; */
+  ${ExtraExtraLarge({ width: "20%" })}
+
 `;
 
 export const Text = styled.p`
@@ -44,7 +49,9 @@ export const Text = styled.p`
 
 export const ImageContainer = styled.div`
   ${Medium({ width: "75%", margin: "-3em auto" })};
-  /* border:1px solid red; */
+  ${ExtraExtraLarge({ width: "50%" })};
+
+
 `;
 
 export const Image = styled.img`

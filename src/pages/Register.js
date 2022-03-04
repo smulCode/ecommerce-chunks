@@ -73,6 +73,15 @@ const Register = () => {
   const [name, setName] = useState("");
   const [alert, setAlert] = useState(false);
   const [passwordCheck, setPasswordCheck] = useState(false);
+  const [user, loading] = useAuthState(auth);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (loading) {
+      //TODO: maybe trigger a loading screen
+      return;
+    }
+    if (user) navigate("/dashboard");
+  }, [user, loading]);
 
   useEffect(() => {
     // This will run when the page first loads and whenever the title changes

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Medium,Large,ExtraExtraLarge } from "../../responsive";
+import { Medium, Large, ExtraExtraLarge } from "../../responsive";
 
 export const StyledExtraFlavor = styled.div`
   background-color: ${({ theme }) => theme.primaryAccent};
@@ -45,16 +45,14 @@ export const Text = styled.p`
 export const ImgContainer = styled.div`
   width: 100%;
   height: 20vh;
-  overflow:visible;
+  overflow: visible;
   ${Medium({ minHeight: "30vh" })};
   ${Large({ minHeight: "40vh" })};
-  ${ExtraExtraLarge({ height: "35vh", width: "60%", margin: "0 auto" })};
+  ${ExtraExtraLarge({ height: "35vh", width: "50%", margin: "0 auto" })};
 `;
 
 export const Image = styled.img`
   height: 100%;
   width: 100%;
   object-fit: cover;
-
-
 `;

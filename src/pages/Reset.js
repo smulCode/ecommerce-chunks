@@ -11,9 +11,6 @@ import { Link } from "react-router-dom";
 import { auth, sendPasswordReset } from "../firebase";
 
 const Container = styled.div`
-  /* width: 100vw;
-  height: 100vh; */
-
   background-color: ${({ theme }) => theme.secondaryBg};
 `;
 
@@ -61,6 +58,8 @@ const Reset = () => {
   const [email, setEmail] = useState("");
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
+
+  console.log(error);
   useEffect(() => {
     if (loading) return;
     if (user) navigate("/dashboard");
@@ -68,7 +67,7 @@ const Reset = () => {
 
   useEffect(() => {
     // This will run when the page first loads and whenever the title changes
-    document.title = "Reset";
+    document.title = "Reset Password";
   }, []);
 
   return (
