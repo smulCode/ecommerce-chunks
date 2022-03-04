@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/ecommerce-chunks/static/js/main.462656af.js",
+    "main.js": "/ecommerce-chunks/static/js/main.74111b4a.js",
     "static/js/787.0b7a1854.chunk.js": "/ecommerce-chunks/static/js/787.0b7a1854.chunk.js",
     "static/media/wrapper-choco.jpg": "/ecommerce-chunks/static/media/wrapper-choco.e6cd26728f698ec46bc1.jpg",
     "static/media/DOUBLEDARK-FRONT.png": "/ecommerce-chunks/static/media/DOUBLEDARK-FRONT.933b2778200fae39e4b8.png",
@@ -11,7 +11,6 @@
     "static/media/BANANA-FRONT.png": "/ecommerce-chunks/static/media/BANANA-FRONT.fa3816736fa6315306a7.png",
     "static/media/SALTED-OVERHEAD.png": "/ecommerce-chunks/static/media/SALTED-OVERHEAD.acfc57c81d511e2aac0a.png",
     "static/media/VARIETY_SPLIT_LG_1000x.png": "/ecommerce-chunks/static/media/VARIETY_SPLIT_LG_1000x.8b6c381fc2966e1af69d.png",
-    "static/media/SALTED-SIDE.png": "/ecommerce-chunks/static/media/SALTED-SIDE.9107b0083699f24c84cf.png",
     "static/media/choco-part-bar.png": "/ecommerce-chunks/static/media/choco-part-bar.9107b0083699f24c84cf.png",
     "static/media/DOUBLEDARK-OVERHEAD.png": "/ecommerce-chunks/static/media/DOUBLEDARK-OVERHEAD.18cd02673255369521e6.png",
     "static/media/ALMOND-OVERHEAD.png": "/ecommerce-chunks/static/media/ALMOND-OVERHEAD.509e96efd38145653880.png",
@@ -24,10 +23,10 @@
     "static/media/nut.png": "/ecommerce-chunks/static/media/nut.d962f49a06b212aff718.png",
     "static/media/sugar.png": "/ecommerce-chunks/static/media/sugar.ffb738dfe81e67bed03f.png",
     "index.html": "/ecommerce-chunks/index.html",
-    "main.462656af.js.map": "/ecommerce-chunks/static/js/main.462656af.js.map",
+    "main.74111b4a.js.map": "/ecommerce-chunks/static/js/main.74111b4a.js.map",
     "787.0b7a1854.chunk.js.map": "/ecommerce-chunks/static/js/787.0b7a1854.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.462656af.js"
+    "static/js/main.74111b4a.js"
   ]
 }
